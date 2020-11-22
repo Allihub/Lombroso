@@ -1,0 +1,104 @@
+html {
+    background-color: #f0f0f0;
+    /* background-color: lightgreen; */
+    /* background-image: url(gris.png) */
+}
+
+img {
+	width: 100px;
+	height: 100px;
+}
+
+body {
+    /* border: 0.1px solid rgb(68, 68, 68) ; */
+    margin: auto;
+    padding: 20px;
+    width: 30%;
+    background-color: white;
+    border-radius:5px;
+    color: black;
+    transform: perspective(1px) translateY(25%);
+    opacity: 1;
+    box-shadow: 1px 1px 10px 2px  grey;
+}
+
+Titre {
+    font-size: 30px
+}
+
+label {
+    height:20px;
+    width:20px;
+}
+
+memory {
+    background-color: ;
+}
+
+login { 
+        /* width: 75%; */
+        line-height: 2.5;
+        padding: 17px 30%;
+        /* color: black; */
+        border-radius: 5px;
+        background-color: lightskyblue;
+        /* border: 1px black; */
+}
+
+login:hover {
+    /* background-color:black; */
+    /* color: white; */
+    /* background-color: #66aefc; */
+    /* box-shadow: inset 0px 0px 0px 1px #0062cc; */
+    /* box-sizing: border-box;​ */
+}
+
+.login:active {
+    box-shadow: inset 0px 0px 5px #00356e;
+}
+
+mdp:hover {
+    text-decoration: underline;
+}
+
+input[type=text] {
+    width: 75%;
+    height: 50px;
+    border: none;
+    border-bottom: 2px solid lightskyblue;
+}
+
+input[type=password] {
+    width: 75%;
+    height: 50px;
+    border: none;
+    border-bottom: 2px solid lightskyblue;
+}
+
+
+
+Input::placeholder{
+    /* text-align: unset; */
+    color: lightskyblue;
+    font-size: 17px;
+}
+
+memory {
+    text-align: start;
+}
+
+footer{
+    position: relative;
+}
+
+/* .translate{
+    position: relative;
+    float: right;
+    margin-left: 1000px;
+} */
+
+/* .champ {
+    height: 50px;
+    width: 300px;
+    font-size: 3.5em;
+} */
