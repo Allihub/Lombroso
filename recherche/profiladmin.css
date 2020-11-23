@@ -1,0 +1,39 @@
+#logo{
+	position: relative;
+	left: 10px;
+	top: 10px;
+	width: 160px;
+	height: 150px;
+}
+#role{
+	width: 166px;
+	border: 1px solid black;
+	height: 22px;
+}
+form{
+	position: relative;
+	left: 220px;
+	top: 3px;
+	width: 167px;
+	border-radius: 5px
+}
+
+input{
+	border: 1px solid black;
+	height: 22px;
+	border-radius: 2%;
+
+}
+#supprimer{
+	width: 166px;
+	border: 2px solid black;
+	height: 25px;
+	font-weight: bold;
+}
+#profilpic{
+	position: relative;
+	top: 135px;
+	left: 260px;
+	width: 94.25px;
+	height: 128px;
+}

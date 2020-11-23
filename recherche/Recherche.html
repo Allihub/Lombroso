@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="recherchecss.css">
+<!--<script type="text/javascript" src="recherche.js"></script>-->
+<title>Recherche</title>
+</head>
+<body>
+<img id="logo" src="C:\Users\Moi\OneDrive\Documents\Documents\ISEP\APP\HTML CSS\recherche\logo.png">
+<img id="profilpic" src="C:\Users\Moi\OneDrive\Documents\Documents\ISEP\APP\HTML CSS\profil.jpg">
+
+
+<script>
+function myFunction() {
+  var checkBox = document.getElementById("checkme");
+  var text = document.getElementById("criteres");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}
+</script>
+
+<br>
+	<form id="recherche">
+	<input type="search" name="recherche" id="recherche" placeholder="Recherche"/>
+	<div>Recherche multicritère<input type="checkbox" id="checkme" onclick="myFunction()"/></div>
+	</form>
+	<form id="criteres" style="display: none">
+	<input type="text" name="critere1" id="critere1" placeholder="Critère1" /><br>
+	<input type="text" name="critere2" id="critere2" placeholder="Critère2"/><br>
+	<input type="text" name="critere3" id="critere3" placeholder="Critère3"/><br>
+	<input type="text" name="critere4" id="critere4" placeholder="Critère4"/>
+	</form>
+	<div>
+	<a href="cgu.html" id="cgu">Consulter les CGU</a>
+	<img id="faq" src="C:\Users\Moi\OneDrive\Documents\Documents\ISEP\APP\HTML CSS\recherche\faq.png">
+	<img id="mail" src="C:\Users\Moi\OneDrive\Documents\Documents\ISEP\APP\HTML CSS\recherche\mail.png">
+	</div>
+</body>
+</html>
