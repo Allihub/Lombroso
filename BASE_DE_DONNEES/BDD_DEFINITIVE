@@ -1,0 +1,140 @@
+-- phpMyAdmin SQL Dump
+-- version 4.9.5
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost:8889
+-- Generation Time: Nov 16, 2020 at 09:22 AM
+-- Server version: 5.7.30
+-- PHP Version: 7.4.9
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Database: `ProjetA1`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `CAPTEUR`
+--
+
+CREATE TABLE `CAPTEUR` (
+  `Numero_Capteur` int(11) NOT NULL,
+  `Norme` double NOT NULL,
+  `Nom` varchar(55) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `COLLECTER`
+--
+
+CREATE TABLE `COLLECTER` (
+  `Id_User` int(11) NOT NULL,
+  `Numero_Capteur` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `FAQ`
+--
+
+CREATE TABLE `FAQ` (
+  `Numero_Question` int(11) NOT NULL,
+  `Intitule` text NOT NULL,
+  `Contenu` text NOT NULL,
+  `Id_User` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `RESULTAT`
+--
+
+CREATE TABLE `RESULTAT` (
+  `Numero_Test` int(11) NOT NULL,
+  `Valeur` double NOT NULL,
+  `Date` date NOT NULL,
+  `Id_User` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `UTILISATEUR`
+--
+
+CREATE TABLE `UTILISATEUR` (
+  `Id_User` int(11) NOT NULL,
+  `Nom` varchar(55) NOT NULL,
+  `Prenom` varchar(55) NOT NULL,
+  `Age` int(11) NOT NULL,
+  `Sexe` varchar(55) NOT NULL,
+  `Mot_De_Passe` varchar(55) NOT NULL,
+  `Type` varchar(55) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `CAPTEUR`
+--
+ALTER TABLE `CAPTEUR`
+  ADD PRIMARY KEY (`Numero_Capteur`);
+
+--
+-- Indexes for table `COLLECTER`
+--
+ALTER TABLE `COLLECTER`
+  ADD KEY `Numero_Capteur` (`Numero_Capteur`),
+  ADD KEY `Id_User` (`Id_User`);
+
+--
+-- Indexes for table `FAQ`
+--
+ALTER TABLE `FAQ`
+  ADD PRIMARY KEY (`Numero_Question`),
+  ADD KEY `Id_User` (`Id_User`);
+
+--
+-- Indexes for table `RESULTAT`
+--
+ALTER TABLE `RESULTAT`
+  ADD PRIMARY KEY (`Numero_Test`),
+  ADD KEY `Id_User` (`Id_User`);
+
+--
+-- Indexes for table `UTILISATEUR`
+--
+ALTER TABLE `UTILISATEUR`
+  ADD PRIMARY KEY (`Id_User`);
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `COLLECTER`
+--
+ALTER TABLE `COLLECTER`
+  ADD CONSTRAINT `collecter_ibfk_1` FOREIGN KEY (`Numero_Capteur`) REFERENCES `CAPTEUR` (`Numero_Capteur`),
+  ADD CONSTRAINT `collecter_ibfk_2` FOREIGN KEY (`Id_User`) REFERENCES `UTILISATEUR` (`Id_User`);
+
+--
+-- Constraints for table `FAQ`
+--
+ALTER TABLE `FAQ`
+  ADD CONSTRAINT `faq_ibfk_1` FOREIGN KEY (`Id_User`) REFERENCES `UTILISATEUR` (`Id_User`);
+
+--
+-- Constraints for table `RESULTAT`
+--
+ALTER TABLE `RESULTAT`
+  ADD CONSTRAINT `resultat_ibfk_1` FOREIGN KEY (`Id_User`) REFERENCES `UTILISATEUR` (`Id_User`);
