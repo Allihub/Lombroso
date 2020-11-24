@@ -37,7 +37,14 @@ body {
     width: 60%;
     background-color: white;
     border-radius:5px;
-    color: none
+    color: none ;
+  
+}
+
+
+
+body {
+    
     margin: center ;
     padding: 10px;
     
