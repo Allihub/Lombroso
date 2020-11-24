@@ -125,9 +125,10 @@ footer {
     justify-content: space-between
 }
 
-/*.box_1_element:nth-child(1) {
-    background-color: rgba(255, 0, 0, 0.5);
-}*/
+.box_1_element:nth-child(1) {
+    /*background-color: rgba(255, 0, 0, 0.5);*/
+    margin-top: 50px;
+}
 
 .box_1_element:nth-child(2) {
     /*background-color: rgba(0, 255, 0, 0.5);*/
