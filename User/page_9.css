@@ -31,7 +31,7 @@ ul li{
     float:left; /*on le place à gauche du conteneur*/
     width:100px; /*largeur*/
     height:100px; /*épaisseur*/
-    padding:10px; /*écart entre les images*/
+    padding:0px; /*écart entre les images*/
     list-style:none; /*permet de ne pas avoir de point au début de chaque élément*/
 }
 
@@ -46,7 +46,7 @@ ul li a{
 }
 
 ul li a img{ /*on règle les paramètres de l'image*/
-    width:100px;height:100px;z-index:20;
+    width:50px;height:50px;z-index:20;
     transition-property:width,height,z-index;
     transition-duration:0.4s;
 }
