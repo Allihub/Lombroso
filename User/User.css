@@ -29,16 +29,16 @@ header {
 ul li{
     position:relative; /*on crée de la place pour l'élément sur la page*/
     float:left; /*on le place à gauche du conteneur*/
-    width:100px; /*largeur*/
-    height:100px; /*épaisseur*/
-    padding:0px; /*écart entre les images*/
+    width:50px; /*largeur*/
+    height:50px; /*épaisseur*/
+    padding:10px; /*écart entre les images*/
     list-style:none; /*permet de ne pas avoir de point au début de chaque élément*/
 }
 
 ul li a{
     display:block; /*les balises prennent toute la largeur disponible*/
     overflow:visible; /*gère le dépassement d'un élément dans son bloc*/
-    width:100px;height:100px; 
+    width:50px;height:50px; 
     margin-top:0px;margin-left:0px; /*créer une marge*/
     border:0px solid rgba(0,0,0,0.7); /*bordure et style de bordure*/
     transition-property:width,height,margin,z-index,border; /*propriété pour lesquelles on veut appliquer des transitions*/
@@ -132,6 +132,8 @@ footer {
 
 .box_1_element:nth-child(2) {
     /*background-color: rgba(0, 255, 0, 0.5);*/
+    margin-right: 60px;
+
 }
 
 .box_1_element:nth-child(3) {
