@@ -34,8 +34,12 @@ function myFunction() {
 	<form id="criteres" action= 'resultat.php' method="post" style="display: none">
 	<input type="text" name="critere1" id="critere1" placeholder="Nom" /><br>
 	<input type="text" name="critere2" id="critere2" placeholder="Prenom"/><br>
-	<input type="text" name="critere3" id="critere3" placeholder="Age"/><br>
-	<input type="text" name="critere4" id="critere4" placeholder="Sexe"/> <br>
+	<input type="number" name="critere3" id="critere3" placeholder="Age"/><br>
+	<select name="critere4" id="critere4"> 
+		<option value="">Sexe</option>
+	    <option value="F">F</option>
+	    <option value="M">M</option>
+	</input> <br>
 	<input type="submit" Value=" SOUMETTRE">
 	</form>
 	<div>
