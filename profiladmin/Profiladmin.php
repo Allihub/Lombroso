@@ -5,8 +5,8 @@
 <title>Profil Admin</title>
 </head>
 <body>
-	<img id="logo" src="C:\Users\Moi\OneDrive\Documents\Documents\ISEP\APP\HTML CSS\logo.png">
-	<img id="profilpic" src="C:\Users\Moi\OneDrive\Documents\Documents\ISEP\APP\HTML CSS\profil.jpg">
+	<img id="logo" src="logo.png">
+	<img id="profilpic" src="profil.jpg">
 	<form>
 	<p><input type="text" name="nom" id="nom" placeholder="NOM" /></p>
 	<p><input type="text" name="prenom" id="prenom" placeholder="Prénom" /> </p>
