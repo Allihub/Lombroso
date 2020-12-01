@@ -11,7 +11,7 @@
 		echo $_POST[critere4];
 		// TEST DE LA PRESENCE DES VARIABLES RECUPEREES
 		$sql = 'emma'; // requete a faire en onction du choix de l'utilisateur
-		if(isset $_POST[recherche]){
+		if(isset ($_POST[recherche])){
 
 			$sql='';
 		}
