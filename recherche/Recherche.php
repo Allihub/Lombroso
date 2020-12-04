@@ -7,7 +7,7 @@
 </head>
 <body>
 <img id="logo" src="logo.png">
-<img id="profilpic" src="profil.jpg">
+<img id="profilpic" src="profil.jpg"> 
 
 
 <script>
@@ -36,7 +36,7 @@ function myFunction() {
 	<input type="text" name="critere2" id="critere2" placeholder="Prenom"/><br>
 	<input type="number" name="critere3" id="critere3" placeholder="Age"/><br>
 	<select name="critere4" id="critere4"> 
-		<option value="">Sexe</option>
+		<option value="critere4">Sexe</option>
 	    <option value="F">F</option>
 	    <option value="M">M</option>
 	</input> <br>
