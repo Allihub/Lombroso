@@ -21,13 +21,13 @@
 		
 	   	<Titre>INFINITE MEASURES</Titre>
 		<br><br>
-		   
+		<form action='connexion.php' method='get'>
 		<label for="login"> </label>
-		<input type="text" id="login" onchange="" placeholder="Email" autofocus>
+		<input type="text" id="login" name='login' onchange="" placeholder="Email" autofocus>
 		<br><br>
 		
 		<label for="mdp"> </label>
-		<input type="password" id="mdp" placeholder="Mot de passe">
+		<input type="password" id="mdp" name='mdp' placeholder="Mot de passe">
 		
 
 		<br><br>
@@ -41,17 +41,17 @@
 		
 		
 		<br><br>
-		<login type="button">
-			LOGIN
-		</login>
+		<input id='login' type="submit" value ='LOGIN'>
+			
+		
 		
 		</div>
-
+			</form>
 		<br><br>
 		<mdp type="button" onclick=alert("Réinitialiser_le_mot_de_passe")>
 			Mot de passe oublié ?
 		</mdp>
-
+	 
 		<!-- <input class="champ" type="text" /> -->
 	
 	</body>
