@@ -21,7 +21,7 @@
 			
 		   	<Titre>INFINITE MEASURES</Titre>
 			<br><br>
-			<form action='connexion.php' method='get'>
+			<form action='connexion.php' method='post'>
 			<label for="login"> </label>
 			<input type="text" id="login" name='login' onchange="" placeholder="Email" autofocus>
 			<br><br>
