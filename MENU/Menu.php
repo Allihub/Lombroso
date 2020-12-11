@@ -23,7 +23,7 @@
 			<br><br>
 			<form action='connexion.php' method='post'>
 			<label for="login"> </label>
-			<input type="text" id="login" name='login' onchange="" placeholder="Email" autofocus>
+			<input type="Email" id="login" name='login' onchange="" placeholder="Email" >
 			<br><br>
 			
 			<label for="mdp"> </label>
@@ -47,7 +47,7 @@
 			
 			</div>
 				</form>
-			<br><br>
+			<br>
 			<mdp type="button" onclick=alert("Réinitialiser_le_mot_de_passe")>
 				Mot de passe oublié ?
 			</mdp>
