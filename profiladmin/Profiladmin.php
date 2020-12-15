@@ -5,9 +5,16 @@
 <title>Profil Admin</title>
 </head>
 <body>
+	<div class='bouton'>
+		<?php
+		
+		echo "<a href='../MENU/deconnexion.php' >Se déconnecter</a>"."<br>";
+		
+		?>
+	</div>
 	<img id="logo" src="logo.png">
 	<img id="profilpic" src="profil.jpg">
-	<form>
+	<form action='suppression.php' method='get'>
 	<p><input type="text" name="nom" id="nom" placeholder="NOM" /></p>
 	<p><input type="text" name="prenom" id="prenom" placeholder="Prénom" /> </p>
 	<p><input type="text" name="age" id="age" placeholder="Âge" /></p>
@@ -19,6 +26,6 @@
 		<option value="testeur">Testeur</option>
 		<option value="teste">Testé</option>
 	</select></p>
-	<p><input type="button" value="Supprimer ce profil" name="supprimer" id="supprimer" /></p>
+	<p><input type="submit" value="Supprimer ce profil" name="supprimer" id="supprimer" /></p>
 	</form>
 </body>

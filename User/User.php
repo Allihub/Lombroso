@@ -65,6 +65,19 @@
                     function verif(){
 
                         // alert('yes')
+                        
+                        // if( $('input[name=CGU]').is(':checked') ){
+                        //     alert("jQuery c'est super");
+                        // } else {
+                        //     alert("jQuery c'est autre chose");
+                        // }
+
+                        // if(document.getElementById(CGU).checked == true){
+                        //     alert('CGU  acceptés !');
+                        // }
+                        // else{
+                        //     alert('CGU non acceptés !');
+                        // }
 
                         if (form.CGU.checked == false )
                             {
@@ -75,13 +88,7 @@
                             {
                                 document.location.href="tick.html"
                             }
-
-                        // if(document.getElementById(CGU).checked == true){
-                        //     alert('CGU  acceptés !');
-                        // }
-                        // else{
-                        //     alert('CGU non acceptés !');
-                        // }
+                            // return true;
                     }
                 </script>
                 
