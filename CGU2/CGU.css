@@ -120,7 +120,9 @@ input[type="text"] {
 }
 
 h1 {
+    
     style= font-size:20px ;
+    width:100%;
     text-align: center; 
 
 }
@@ -130,12 +132,42 @@ background-color: lightskyblue;
 color: white;
 border: none;
 cursor: pointer;
-padding:10px;
+padding:20px;
 /*box-shadow: 1px 1px 10px 2px  grey;*/
 font-size: 20px;
+width: 100%;
 }
+
 .boutonmenuprincipal:hover {
 background-color: #33ff3c;
+}
+
+espace{
+
+
+}
+
+
+.validation {
+background-color: lightskyblue;
+color: white;
+border: none;
+cursor: pointer;
+padding:10px;
+margin-top: 25px;
+font-size: 20px;
+}
+.validation:hover {
+background-color: #33ff3c;
+}
+
+#préambule{
+    font-size: 0.8rem;
+    font-weight: 25px;
+    color: black;
+    text-align: justified;
+   font-family: arial black;
+
 }
 .dropdown {
 position: relative;
@@ -177,6 +209,7 @@ footer {
     display: flex;
     align-items: stretch;
     height: 60px;
+
     /*border: 2px solid purple;*/
     justify-content: space-between
 }
@@ -184,6 +217,7 @@ footer {
 .box_1_element:nth-child(1) {
     /*background-color: rgba(255, 0, 0, 0.5);*/
     margin-top: 50px;
+    padding-left: 10px;
 }
 
 .box_1_element:nth-child(2) {
@@ -195,3 +229,42 @@ footer {
 .box_1_element:nth-child(3) {
     /*background-color: rgba(0, 0, 255, 0.5);*/
 }
+
+h1{
+    font-family: arial black;
+    color: #5075ba;
+}
+.formulaire {
+  width: 50%;
+  padding: 12px 20px;
+  position: absolute;
+  right: 0px;
+  height:625px ;
+  background-color: grey;
+
+  box-sizing: border-box;
+  
+}
+
+#envoie input[type=button], input[type=submit], input[type=reset] {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.paragraphe{
+    font-family:arial black;
+
+}
+
+.identité{
+    border:2px blue;
+    border-height:625px ;
+    width: 500px;
+}
+
+
+
