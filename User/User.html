@@ -52,12 +52,38 @@
                 </div>
                 <div class="tick">
                     <lancer>
-                        <input type="checkbox"> Cochez la case lorsque vous êtes prêt à démarrer le test
-                        <br><br>
-                        <a href="#" class="btn-v0">Lancer le test</a>​
+                        
+                        <form method="post" action="#" name="form">
+                            <input type="checkbox" name="CGU"> J'accepte les <a href="../CGU2/CGU.html" style="color:black" title="CGU">CGU </a> <br>
+                        </form>
+                        ​<a href="#" class="btn-v0"  onclick="verif()">Lancer le test</a>
                     </lancer>
                     
                 </div>
+
+                <script type="text/javascript">
+                    function verif(){
+
+                        // alert('yes')
+
+                        if (form.CGU.checked == false )
+                            {
+                            alert('Vous devez accepter les cgu pour lancer le test.');
+                            // return false;
+                            }
+                        else
+                            {
+                                document.location.href="tick.html"
+                            }
+
+                        // if(document.getElementById(CGU).checked == true){
+                        //     alert('CGU  acceptés !');
+                        // }
+                        // else{
+                        //     alert('CGU non acceptés !');
+                        // }
+                    }
+                </script>
                 
             </section>
         </div>

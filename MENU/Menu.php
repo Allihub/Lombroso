@@ -48,8 +48,8 @@
 			</div>
 				</form>
 			<br>
-			<mdp type="button" onclick=alert("Réinitialiser_le_mot_de_passe")>
-				Mot de passe oublié ?
+			<mdp type="button" onclick=href="mdp.html" >
+				<a href="mdp.html" style="color:lightskyblue"> Mot de passe oublié ? </a>
 			</mdp>
 		 
 			<!-- <input class="champ" type="text" /> -->
