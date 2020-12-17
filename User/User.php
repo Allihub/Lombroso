@@ -16,18 +16,18 @@
             <div class="box_0_element">
                 <ul>
                     <li>
-                        <a href="../User/User.html">
+                        <a href="../User/User.php">
                             <image src= "logo-alex_Plan de travail 1.png" title="Menu"></image>
                         </a>
                    </li>
                 </ul>
                 
             </div>
-            <div class="box_0_element">Lombroso</div>
+            <div class="box_0_element"><a href="../Aide/aide.html" style="color:black" title="Aide">Lombroso </a></div>
             <div class="box_0_element">
                 <ul>
                     <li>
-                        <a href="">
+                        <a href="../profiluser/profiluser.html">
                             <image src= "user.png" title="Profil"></image>
                         </a>
                    </li>
@@ -45,6 +45,12 @@
                         
                         <p>
                             Image de fond
+                            <br><br>
+                            <?php
+		
+                            echo "<a href='../MENU/deconnexion.php' >Se déconnecter</a>"."<br>";
+                            
+                            ?>
                         </p>
                     </article>
                     
