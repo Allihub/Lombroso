@@ -39,7 +39,7 @@
         
         <div class="aside_nav">
             <section>
-                
+                <a href="../recherche/recherches.php" style="color:black" title="Aide">Recherche </a>
 				<form action="Adduser.php" method="post">
                 <p><input type="text" name="mail" id="mail" placeholder="mail" /></p>
 				<p><input type="text" name="nom" id="nom" placeholder="NOM" /></p>
