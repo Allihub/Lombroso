@@ -50,7 +50,7 @@
 						$estconnecte = TRUE ;
 						$_SESSION['utilisateurConnecte' ] = $estconnecte;
 						echo ' Vous etes connectés';
-						echo "<meta http-equiv='refresh'content='1;URL=../profiladmin/Profiladmin.php'>";//changer la redirection mettre la nouvelle page
+						echo "<meta http-equiv='refresh'content='1;URL=../Admin/Accueil/admin.html'>";//changer la redirection mettre la nouvelle page
 					}
 				}
 
