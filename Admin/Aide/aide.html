@@ -16,7 +16,7 @@
             <div class="box_0_element">
                 <ul>
                     <li>
-                        <a href="../Accueil/admin.html">
+                        <a href="../Accueil/admin.php">
                             <image src= "logo-alex_Plan de travail 1.png" title="Menu"></image>
                         </a>
                    </li>
