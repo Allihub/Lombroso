@@ -205,8 +205,6 @@ footer {
     text-align: center;
 }
 
-}
-
 #box_1 {
     display: flex;
     align-items: stretch;
@@ -267,5 +265,6 @@ h1{
     border-height:625px ;
     width: 500px;
 }
+
 
 
