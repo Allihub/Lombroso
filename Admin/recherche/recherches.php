@@ -17,18 +17,18 @@
                 <ul>
                     <li>
                         <a href="../Accueil/admin.html">
-                            <image src= "logo-alex_Plan de travail 1.png"></image>
+                            <image src= "logo-alex_Plan de travail 1.png" title="Menu"></image>
                         </a>
                    </li>
                 </ul>
                 
             </div>
-            <div class="box_0_element">Lombroso</div>
+            <div class="box_0_element"><a href="../Aide/aide.html" style="color:black" title="Aide">Lombroso </a></div>
             <div class="box_0_element">
                 <ul>
                     <li>
-                        <a href="">
-                            <image src= "user.png"></image>
+                        <a href="../profiladmin/profiladmin.php">
+                            <image src= "user.png" title="Profil"></image>
                         </a>
                    </li>
                 </ul>
@@ -83,12 +83,12 @@
     </div>
     <footer>
         <div id="box_1">
-            <div class="box_1_element"><a href="../CGU/CGU.html" style="color:black">Consulter les CGU</a></div>
+            <div class="box_1_element"><a href="../CGU2/CGU.html" style="color:black" title="CGU">Consulter les CGU</a></div>
             <div class="box_1_element">
                 <ul>
                     <li>
                         <a href="../mail/mail.html">
-                            <image src= "email.png"></image>
+                            <image src= "email.png" title="Mail"></image>
                         </a>
                    </li>
                 </ul>
@@ -97,7 +97,7 @@
                 <ul>
                     <li>
                         <a href="../FAQ/FAQ.html">
-                            <image src= "help.png"></image>
+                            <image src= "help.png" title="FAQ"></image>
                         </a>
                    </li>
                 </ul>
