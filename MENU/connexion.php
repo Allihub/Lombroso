@@ -24,7 +24,7 @@
 				}// GESTION DES ERREURS SUR LE MOT DE PASSE ET L EMAIL
 
 				if($ok==TRUE){
-					$bdd= new PDO('mysql:host=localhost;dbname=ProjetA1', 'root', 'root');
+					$bdd= new PDO('mysql:host=localhost;dbname=ProjetA1', 'root', '');
 
 					$bdd -> setAttribute (PDO :: ATTR_ERRMODE , PDO :: ERRMODE_EXCEPTION );
 					$sql="select email, Mot_De_Passe, Type FROM UTILISATEUR  WHERE email LIKE ? AND Mot_De_Passe like?";
@@ -60,7 +60,7 @@
 						$estconnecte = TRUE ;
 						$_SESSION['utilisateurConnecte' ] = $estconnecte;
 						echo ' Vous etes connectés';
-						echo "<meta http-equiv='refresh'content='1;URL=../User/User.html'>";//changer la redirection mettre la nouvelle page
+						echo "<meta http-equiv='refresh'content='1;URL=../User/User.php'>";//changer la redirection mettre la nouvelle page
 					}
 				}
 					else {
