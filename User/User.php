@@ -50,7 +50,7 @@
                     
                                         
                 </div>
-                <div class="tick">
+                <!-- <div class="tick">
                     <lancer>
                         
                         <form method="post" action="#" name="form">
@@ -90,7 +90,7 @@
                             }
                             // return true;
                     }
-                </script>
+                </script> -->
                 
             </section>
         </div>
