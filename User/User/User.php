@@ -48,7 +48,7 @@
                             <br><br>
                             <?php
 		
-                            echo "<a href='../MENU/deconnexion.php' >Se déconnecter</a>"."<br>";
+                            echo "<a href='../../MENU/deconnexion.php' >Se déconnecter</a>"."<br>";
                             
                             ?>
                         </p>
