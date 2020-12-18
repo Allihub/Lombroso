@@ -60,6 +60,7 @@
                     <lancer>
                         
                         <form method="post" action="#" name="form">
+                            <input type="text" name="iduser" placeholder="IdUser:"> <br><br>
                             <input type="checkbox" name="CGU"> J'accepte les <a href="../CGU2/CGU.html" style="color:black" title="CGU">CGU </a> <br>
                         </form>
                         ​<a href="#" class="btn-v0"  onclick="verif()">Lancer le test</a>
