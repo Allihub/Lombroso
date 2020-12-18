@@ -11,7 +11,7 @@
 header {
     /*border: 3px solid red;*/
     text-align: center;
-    height: calc(22vh - 26px);
+    height: calc(22vh - 30px);
 }
 
 #box_0 {
@@ -61,7 +61,9 @@ ul li a img{ /*on règle les paramètres de l'image*/
 
 .under_header {
     display: block;
-    min-height: 65vh;
+    /* min-height: 65vh; */
+    max-height: 440px;
+    overflow: scroll;
 }
 
 section {
@@ -69,7 +71,6 @@ section {
     flex-direction: column;
     /*border: 3px solid blue;*/
     margin: 30px;
-    text-align: center;
 }
 
 
@@ -101,22 +102,6 @@ section .tick {
     border: 3px rosybrown;
 } */
 
-.titre{
-    margin-bottom: 30px;
-}
-
-input[type="text"] {
-    width:50%;
-    height: 35px;
-}
-
-#supprimer{
-	width: 166px;
-	border: 2px solid black;
-	height: 25px;
-	font-weight: bold;
-}
-
 .btn-v0 {
     text-decoration: none;
     display: block;
@@ -132,6 +117,7 @@ footer {
     /*border: 3px solid orange;*/
     height: calc(10vh - 9px);
     text-align: center;
+    /* margin-top: -2px; */
 }
 
 #box_1 {
@@ -155,4 +141,101 @@ footer {
 
 .box_1_element:nth-child(3) {
     /*background-color: rgba(0, 0, 255, 0.5);*/
+}
+
+
+
+
+
+/* Espacement entre les questions */
+.faq-section{
+    margin: 10px 0;
+}
+
+/* Masquer les checkbox et les paragraphes */
+.faq-section input,
+.faq-section p{
+    display: none;
+}
+
+/* Montrer uniquement les débuts de réponses */
+.faq-section label+p{
+    display: block;
+    color: #999;
+    font-size: .85em;
+    transition: all .15s ease-out;
+    /* Couper le texte */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Si le checkbox est coché, montrer tous les paragraphes */
+.faq-section input[type=checkbox]:checked~p{
+    display: block;
+    color: #444;
+    font-size: 1em;
+    /* Restaurer le texte entier */
+    text-overflow: clip;
+    white-space: normal;
+    overflow: visible;
+}
+
+/* Style des label */
+.faq-section label{
+    font-size: 1.2em;
+    cursor: pointer;
+    background: #eee;
+    display: block;
+    position: relative;
+    padding: 7px 10px;
+    font-weight: bold;
+    border: 1px solid #ddd;
+    border-left: 3px solid #888;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+    transition: all .15s ease-out;
+}
+
+/* Éviter de sélectionner le texte en cliquant plusieurs fois */
+.faq-section label::selection{
+    background: none;
+}
+
+.faq-section label:hover{
+    background: #f5f5f5;
+}
+
+/* Style du label si le checkbox est coché */
+.faq-section input[type=checkbox]:checked~label{
+    border-color: #ff7f50;
+    background: #f5deb4;
+    background-image: linear-gradient(to bottom, #fff, #f5deb4);
+    box-shadow: 0 0 1px rgba(0,0,0,.4);
+}
+
+/* Flèche du label par défaut */
+.faq-section label::before{
+    content: '';
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    margin-top: -6px;
+    border: 6px solid transparent;
+    border-left-color: inherit;
+}
+
+/* Flèche du label sélectionné */
+.faq-section input[type=checkbox]:checked~label::before{
+    border: 6px solid transparent;
+    border-top-color: inherit;
+    margin-top: -3px;
+    right: 10px;
+}
+
+.faq-section footer{
+    text-align: center;
+}
+input[type="text"] {
+    width:50%;
+    height: 50px;
 }

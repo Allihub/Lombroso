@@ -12,7 +12,7 @@
 				$ok=TRUE;
 				if($_POST['mdp']=="") {
 					echo "Le mot de passe n'a pas été saisi"."<br>";
-					echo "<meta http-equiv='refresh'content='1;URL=Menu.html'>";
+					echo "<meta http-equiv='refresh'content='1;URL=Menu.php'>";
 					$ok=FALSE;
 				}
 
@@ -50,7 +50,7 @@
 						$estconnecte = TRUE ;
 						$_SESSION['utilisateurConnecte' ] = $estconnecte;
 						echo ' Vous etes connectés';
-						echo "<meta http-equiv='refresh'content='1;URL=../Admin/Accueil/admin.html'>";//changer la redirection mettre la nouvelle page
+						echo "<meta http-equiv='refresh'content='1;URL=../Admin/Accueil/admin.php'>";//changer la redirection mettre la nouvelle page
 					}
 				}
 
@@ -60,7 +60,7 @@
 						$estconnecte = TRUE ;
 						$_SESSION['utilisateurConnecte' ] = $estconnecte;
 						echo ' Vous etes connectés';
-						echo "<meta http-equiv='refresh'content='1;URL=../User/User.php'>";//changer la redirection mettre la nouvelle page
+						echo "<meta http-equiv='refresh'content='1;URL=../User/User/User.php'>";//changer la redirection mettre la nouvelle page
 					}
 				}
 					else {
