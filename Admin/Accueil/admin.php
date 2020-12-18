@@ -71,13 +71,19 @@
                 <script type="text/javascript">
                     function verif(){
 
-                        // alert('yes')
-
-                        if (form.CGU.checked == false )
+                        if (form.CGU.checked == false && form.iduser.value=="")
+                            {
+                            alert('Vous devez accepter les cgu et renseigner la case id pour lancer le test.');
+                            }
+                        else if (form.CGU.checked == false )
                             {
                             alert('Vous devez accepter les cgu pour lancer le test.');
-                            // return false;
                             }
+                        else if (form.iduser.value=="")
+                        {
+                        alert('Vous devez renseigner la case id pour lancer le test.');
+                        }
+                        
                         else
                             {
                                 document.location.href="tick.html"
