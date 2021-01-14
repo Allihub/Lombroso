@@ -1,0 +1,114 @@
+<?php 
+session_start();
+$connection= new PDO("'mysql:host=localhost;dbname=ProjetA1;charset=utf8'", "id15832124_projeta1final", "h2a+9g#Ho048MD@U");
+$role='user';
+
+#profil du user
+#verifier si c'est un user dans le type dans la table utilisateur
+$mailcheck= $bdd->prepare('SELECT * FROM utilisateur WHERE type= ?');
+$mailcheck->execute(array(htmlspecialchars($_POST['type'])));
+$result = $mailcheck->fetch();
+$mailcheck = $result[0];
+#afficher le nom, prénom, sexe, age, email,dernier test et resultat du dernier test
+$prenom=htmlspecialchars($_POST['prenom']);
+$nom=htmlspecialchars($_POST['nom']);
+$age=htmlspecialchars($_POST['age']);
+$roole=htmlspecialchars($_POST['sexe']);
+$mail=htmlspecialchars($_POST['email']);
+$resultat=htmlspecialchars($_POST['valeur']);
+$dateresultat=htmlspecialchars($_POST['date']);
+
+
+if (isset($_SESSION['pseudo'])) // Si le membre est connecté
+{
+echo '<p>Salut  '.$_SESSION['pseudo'].', !!!</p>';
+}
+else // si personne n'est connecté
+{
+echo'<a href="./connexion.php">veuillez vous connecter</a>';
+}
+
+
+ ?>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="profiluser.css">
+    <title>Mail</title>
+</head>
+
+<body>
+<!-- <a href="page_8.html" class="change_page"></a> -->
+
+<div class="content">
+    <header>
+        <div id="box_0">
+            <div class="box_0_element">
+                <ul>
+                    <li>
+                        <a href="../User/User.php">
+                            <image src= "logo-alex_Plan de travail 1.png" title="Menu"></image>
+                        </a>
+                   </li>
+                </ul>
+                
+            </div>
+            <div class="box_0_element"><a href="../Aide/aide.html" style="color:black" title="Aide">Lombroso </a></div>
+            <div class="box_0_element">
+                <ul>
+                    <li>
+                        <a href="../profiluser/profiluser.html">
+                            <image src= "user.png" title="Profil"></image>
+                        </a>
+                   </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="under_header">
+        
+        <div class="aside_nav">
+            <section>
+                
+                <div class="titre">
+                    <h2> 
+                        User profil
+                    </h2>
+                </div>
+                  
+                
+            </section>
+        </div>
+    </div>
+    <footer>
+        <div id="box_1">
+            <div class="box_1_element"><a href="../CGU2/CGU.html" style="color:black" title="CGU">Consulter les CGU</a></div>
+            <div class="box_1_element">
+                <ul>
+                    <li>
+                        <a href="../mail/mail.html">
+                            <image src= "email.png" title="Mail"></image>
+                        </a>
+                   </li>
+                </ul>
+            </div>
+            <div class="box_1_element">
+                <ul>
+                    <li>
+                        <a href="../FAQ/FAQ.html">
+                            <image src= "help.png" title="FAQ"></image>
+                        </a>
+                   </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<!-- <a href="page_10.html" class="change_page"></a> -->
+</body>
+</html>
