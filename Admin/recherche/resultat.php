@@ -42,14 +42,14 @@
 
             <?php
             try {
-                $bdd = new PDO('mysql:host=localhost;dbname=ProjetA1;charset=utf8', 'root', '');
+                $bdd = new PDO('mysql:host=localhost;dbname=lombroso;charset=utf8', 'root', '');
             } catch (Exception $e) {
                 die('Erreur : ' . $e->getMessage());
             }
-            $stmt = $bdd->prepare("SELECT email, Nom, Age, email, Type FROM utilisateur where email = ?");
+            $stmt = $bdd->prepare("SELECT email, Nom, Age, prenom, Type FROM utilisateur where email = ?");
             $stmt->execute(array($_POST['recherche']));
             $user = $stmt->fetch();
-            echo "Mail: " . $user["mail"]."<br>". "Nom: " . $user["prenom"]. " " . $user["nom"]."<br>"."Age: ". $user['age']." ans"."<br>"."Rôle : ". $user['roole']."<br>";
+            echo "Mail: " . $user["email"]."<br>". "Nom: " . $user["prenom"]. " " . $user["Nom"]."<br>"."Age: ". $user['Age']." ans"."<br>"."Rôle : ". $user['Type']."<br>";
 
             /*while($row = $result->fetch_assoc()) {
                 echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
