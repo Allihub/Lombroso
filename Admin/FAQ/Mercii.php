@@ -16,15 +16,11 @@
    
 	$message= $_POST["question"];
 	
-
-	// $mail = $_POST["email"];
 	
-
-	// $message = $message . " Ce mail a été envoyé par: " . $mail;
-	
-
    
-    mail("infinitemesurescontact@gmail.com","message provenant de FAQ",$message,$header);
+	mail("infinitemesurescontact@gmail.com","message provenant de FAQ",$message,$header);
+	
+	header("Refresh:5; url=FAQ.php");
 }
     
 ?>

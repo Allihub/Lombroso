@@ -93,7 +93,7 @@
         </div>
     </div>
     <footer>
-    <form method="POST" action="Merci.php">
+    <form method="POST" action="Mercii.php">
         <input type ="text" id="poser" placeholder="Poser une question" name="question"> <input type="submit">
     </form>
     </footer>
