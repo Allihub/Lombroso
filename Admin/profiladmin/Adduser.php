@@ -7,6 +7,7 @@ $prenom=$_SESSION['prenom'];
 $nom=$_SESSION['nom'];
 $age=$_SESSION['age'];
 $role=$_SESSION['role']; */
+//???Ajout de commentaire
 $role = 'administrateur';
 
 
