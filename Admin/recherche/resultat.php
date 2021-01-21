@@ -42,7 +42,7 @@
 
             <?php
             try {
-                $bdd = new PDO('mysql:host=localhost;dbname=lombroso;charset=utf8', 'root', '');
+                $bdd= new PDO('mysql:host=localhost;dbname=ProjetA1', 'root', 'root');
             } catch (Exception $e) {
                 die('Erreur : ' . $e->getMessage());
             }
@@ -51,12 +51,30 @@
             $user = $stmt->fetch();
             if($user ==""){
                 echo "Cet utilisateur n'existe pas";
+                echo "<meta http-equiv='refresh'content='2;URL=recherches.php'>";
+
             }
             else{
                 echo "Mail: " . $user["email"]."<br>". "Nom: " . $user["prenom"]. " " . $user["Nom"]."<br>"."Age: ". $user['Age']." ans"."<br>"."Rôle : ". $user['Type']."<br>";
             }
 
             ?>
+            
+            <?php 
+             echo '<br>';
+            
+            $req=$bdd->prepare("SELECT * FROM resultat, utilisateur where  resultat.Id_User= utilisateur.Id_User and email = ? ");
+            if($donnees){}
+            $req->execute(array($_POST['recherche']));
+
+            $donnees = $req->fetch();
+
+            if(count($donnees)!=0){
+            echo "Vos resultats pour le test: ".$donnees["Numero_Test"]."<br>". "Question 1: ".$donnees["Question1"]."<br> "."Question 2 : ".$donnees["Question2"]."<br>"."Question 3 : ".$donnees["Question3"]."<br>"."Question4 : ".$donnees["Question4"]."<br>";
+                
+            }
+
+             ?>
                 
             </section>
         </div>
