@@ -110,6 +110,11 @@ input[type="text"] {
     height: 35px;
 }
 
+input[type="password"] {
+    width:50%;
+    height: 35px;
+}
+
 #supprimer{
 	width: 166px;
 	border: 2px solid black;
