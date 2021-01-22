@@ -30,12 +30,10 @@
 			<input type="password" id="mdp" name='mdp' placeholder="Mot de passe">
 			
 
-			<br><br>
-			<input type="checkbox">
+			<br>
 			
-			<memory type="text">
-				Se souvenir de moi
-			</memory>
+			
+			
 			
 			
 			
@@ -43,6 +41,12 @@
 			<br><br>
 			<input id='login' type="submit" value ='LOGIN'>
 				
+			<br><br>
+			
+			<subscribe type="text">
+				<a href="inscrire.php" style="color:lightskyblue"> S'inscrire </a>
+			</subscribe>
+
 			
 			
 			</div>

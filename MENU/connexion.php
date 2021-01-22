@@ -27,14 +27,16 @@
 					$bdd= new PDO('mysql:host=localhost;dbname=lombroso', 'root', '');
 
 					$bdd -> setAttribute (PDO :: ATTR_ERRMODE , PDO :: ERRMODE_EXCEPTION );
-					$sql="select email, Mot_De_Passe, Type FROM UTILISATEUR  WHERE email LIKE ? AND Mot_De_Passe like?";
+					$sql="select email, Mot_De_Passe, Type FROM UTILISATEUR  WHERE email LIKE ?";
 					
 					$statement = $bdd -> prepare ( $sql );
-					$statement -> execute (array($_POST['login'],$_POST['mdp']));
+					$statement -> execute (array($_POST['login']));
 
 					$donnees =$statement->fetch();
 
-					if($_POST['login']!=$donnees['email'] or $_POST['mdp']!=$donnees['Mot_De_Passe']){
+					$testmdp = password_verify ( $_POST['mdp'] , $donnees['Mot_De_Passe']);
+
+					if($_POST['login']!=$donnees['email'] or !$testmdp){
 						ECHO"Votre adresse email ou mot de passe est incorrect";
 						echo'<br>';
 						echo"<meta http-equiv='refresh'content='3;URL=Menu.php'>";
