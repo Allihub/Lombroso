@@ -14,19 +14,19 @@
             <div class="box_0_element">
                 <ul>
                     <li>
-                        <a href="../User/User.html">
-                            <image src= "logo-alex_Plan de travail 1.png"></image>
+                        <a href="../Accueil/admin.php">
+                            <image src= "logo-alex_Plan de travail 1.png" title="Menu"></image>
                         </a>
                    </li>
                 </ul>
                 
             </div>
-            <div class="box_0_element">Lombroso</div>
+            <div class="box_0_element"><a href="../Aide/aide.html" style="color:black" title="Aide">Lombroso </a></div>
             <div class="box_0_element">
                 <ul>
                     <li>
-                        <a href="">
-                            <image src= "user.png"></image>
+                        <a href="../profiladmin/profiladmin.php">
+                            <image src= "user.png" title="Profil"></image>
                         </a>
                    </li>
                 </ul>
@@ -40,10 +40,10 @@
                 
 				<form name="form" action="Adduser.php" method="post">
                 <p><input type="text" name="mail" id="mail" placeholder="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" /></p>
-				<p><input type="text" name="nom" id="nom" placeholder="Nom" pattern="[a-zA-ZÀ-ÿ]" /></p>
-				<p><input type="text" name="prenom" id="prenom" placeholder="Prénom" pattern="[a-zA-ZÀ-ÿ]" /> </p>
+				<p><input type="text" name="nom" id="nom" placeholder="Nom" pattern="[a-zA-ZÀ-ÿ]*" /></p>
+				<p><input type="text" name="prenom" id="prenom" placeholder="Prénom" pattern="[a-zA-ZÀ-ÿ]*" /> </p>
 				<p><input type="text" name="mdp" id="mdp" placeholder="Mot de passe"/></p>
-                <p><input type="text" name="age" id="age" placeholder="Âge" pattern="[0-9]" /></p>
+                <p><input type="text" name="age" id="age" placeholder="Âge" pattern="[0-9]*" /></p>
 				<p><input type="text" name="test" id="test" placeholder="Dernier test effectué le :"/></p>
 				<p><input type="text" name="resultat" id="resultat" placeholder="Résultat du dernier test :"/></p>
                 <p><select name="sexe" id="sexe">
@@ -69,12 +69,12 @@
     </div>
     <footer>
         <div id="box_1">
-            <div class="box_1_element"><a href="../CGU/CGU.html" style="color:black">Consulter les CGU</a></div>
+            <div class="box_1_element"><a href="../CGU2/CGU.html" style="color:black" title="CGU">Consulter les CGU</a></div>
             <div class="box_1_element">
                 <ul>
                     <li>
                         <a href="../mail/mail.html">
-                            <image src= "email.png"></image>
+                            <image src= "email.png" title="Mail"></image>
                         </a>
                    </li>
                 </ul>
@@ -82,8 +82,8 @@
             <div class="box_1_element">
                 <ul>
                     <li>
-                        <a href="../FAQ/FAQ.html">
-                            <image src= "help.png"></image>
+                        <a href="../FAQ/FAQ.php">
+                            <image src= "help.png" title="FAQ"></image>
                         </a>
                    </li>
                 </ul>
