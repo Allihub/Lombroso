@@ -12,7 +12,7 @@ $role = 'administrateur';
 
 
 try {
-    $bdd = new PDO('mysql:host=localhost;dbname=lombroso;charset=utf8', 'root', '');
+    $bdd= new PDO('mysql:host=localhost;dbname=ProjetA1', 'root', 'root');
 } catch (Exception $e) {
     die('Erreur : ' . $e->getMessage());
 }//Connexion classqiue à la bdd
@@ -38,6 +38,7 @@ $age=htmlspecialchars($_POST['age']);
 $roole=htmlspecialchars($_POST['role']);
 $mail=htmlspecialchars($_POST['mail']);
 $sexe=htmlspecialchars($_POST['sexe']);
+$mdp=htmlspecialchars($_POST['mdp']);
 
 
 if ($role == 'administrateur') {
@@ -47,11 +48,19 @@ if ($role == 'administrateur') {
         {
             if ($mailcheck == "") //Si le mail de l'utilisateur est vide, donc qu'il n'existe pas encore on peut l'ajouter
             {
+                if(preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#?$%]{8,16}$/', $mdp)) {
+                    
+                
                 // Ajout de l'utilisateur à l'aide d'une requête préparée
+                
                 $req = $bdd->prepare('INSERT INTO utilisateur (Nom, Prenom, Age, Sexe, Mot_De_Passe, Type, email) VALUES(?, ?, ?, ?, ?, ?, ?)');
                 $req->execute(array(htmlspecialchars($_POST['nom']), htmlspecialchars($_POST['prenom']), htmlspecialchars($_POST['age']), htmlspecialchars($_POST['sexe']), htmlspecialchars(password_hash($_POST['mdp'], PASSWORD_DEFAULT)), htmlspecialchars($_POST['role']),htmlspecialchars($_POST['mail'])));
 
                 echo 'L\'utilisateur a bien été ajouté !';
+            }
+             elseif(!preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#?$%]{8,16}$/', $mdp)){
+                echo"Veuillez choisir un mot de passe plus pertinent. Votre mot de passe doit contenir AU MOINS UNE LETTRE MAJUSCULE, UNE LETTRE MINISCULE, UN CHIFFRE ET UN CARACTERE SPÉCIAL";
+             }
             } else //Sinon message comme quoi l'utilisateur est déjà présent dans la bdd
                 {
                 echo 'Cette adresse mail est déja utilisé merci d\'utiliser une adresse valide';
