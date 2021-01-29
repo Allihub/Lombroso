@@ -149,3 +149,16 @@ footer {
 .box_1_element:nth-child(3) {
     /*background-color: rgba(0, 0, 255, 0.5);*/
 }
+
+
+#cemail{
+    border-radius: 10px;
+
+}
+#submit{
+    margin-top: 10px; 
+    border-radius: 10px;
+    background-color: lightskyblue;
+    height: 30px;
+
+}

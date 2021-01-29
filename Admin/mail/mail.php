@@ -16,7 +16,7 @@
             <div class="box_0_element">
                 <ul>
                     <li>
-                        <a href="../User/User.php">
+                        <a href="../Accueil/admin.php">
                             <image src= "logo-alex_Plan de travail 1.png" title="Menu"></image>
                         </a>
                    </li>
@@ -70,7 +70,7 @@
             <div class="box_1_element">
                 <ul>
                     <li>
-                        <a href="../mail/mail.html">
+                        <a href="../mail/mail.php">
                             <image src= "email.png" title="Mail"></image>
                         </a>
                    </li>
