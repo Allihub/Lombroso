@@ -107,7 +107,7 @@
             <div class="box_1_element">
                 <ul>
                     <li>
-                        <a href="../mail/mail.html">
+                        <a href="mailu.php">
                             <image src= "email.png" title="Mail"></image>
                         </a>
                    </li>

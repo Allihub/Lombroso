@@ -55,8 +55,8 @@
                 <p><select name="role" id="role" placeholder="Rôle">
                     <option value="">Non spécifié</option>
                     <option value="administrateur">Administrateur</option>
-                    <option value="testeur">Testeur</option>
-                    <option value="teste">Testé</option>
+                    <option value="gestionnaire">Gestionnaire</option>
+                    <option value="user">Utilisateur</option>
                 </select></p>
                 <p><input type="submit" value="Ajouter ce profil" name="ajouter" id="ajouter" onclick="return verif(document.form.mail.value, document.form.nom.value, document.form.prenom.value, document.form.mdp.value, document.form.age.value, document.form.sexe.value, document.form.role.value);" />
                     <input type="submit" value="Enregistrer les modifications" name="modifier" id="modifier" /></p>

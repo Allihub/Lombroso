@@ -9,7 +9,7 @@ session_start();
 	<?php
 	
 		if($_POST['cemail']==""){
-			echo "<meta http-equiv='refresh'content='0;URL=mail.php'>";
+			echo "<meta http-equiv='refresh'content='0;URL=mailu.php'>";
 		}
 		else{
 			
@@ -20,7 +20,7 @@ session_start();
 			$statement = $bdd -> prepare ( $sql );
 			$statement -> execute (array($_POST['cemail'],$_SESSION['enreg']));
 			echo'VOTRE ADRESSE E-MAIL SECONDAIRE A BIEN ETE ENREGISTRÉE';
-		    echo "<meta http-equiv='refresh'content='2;URL=../../Admin/Accueil/admin.php'>";
+		    echo "<meta http-equiv='refresh'content='2;URL=User.php'>";
 		}
 		//respecter la forme de l emaail, enregistrer en bd si tout est ok+msg d enreg.	 ?>
 </head>
