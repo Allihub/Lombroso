@@ -53,8 +53,8 @@ if ($role == 'administrateur') {
                 
                 // Ajout de l'utilisateur à l'aide d'une requête préparée
                 
-                $req = $bdd->prepare('INSERT INTO utilisateur (Nom, Prenom, Age, Sexe, Mot_De_Passe, Type, email) VALUES(?, ?, ?, ?, ?, ?, ?)');
-                $req->execute(array(htmlspecialchars($_POST['nom']), htmlspecialchars($_POST['prenom']), htmlspecialchars($_POST['age']), htmlspecialchars($_POST['sexe']), htmlspecialchars(password_hash($_POST['mdp'], PASSWORD_DEFAULT)), htmlspecialchars($_POST['role']),htmlspecialchars($_POST['mail'])));
+                $req = $bdd->prepare('INSERT INTO utilisateur (Nom, Prenom, Age, Sexe, Mot_De_Passe, Type, email,email2) VALUES(?, ?, ?, ?, ?, ?, ?,?)');
+                $req->execute(array(htmlspecialchars($_POST['nom']), htmlspecialchars($_POST['prenom']), htmlspecialchars($_POST['age']), htmlspecialchars($_POST['sexe']), htmlspecialchars(password_hash($_POST['mdp'], PASSWORD_DEFAULT)), htmlspecialchars($_POST['role']),htmlspecialchars($_POST['mail']),''));
 
                 echo 'L\'utilisateur a bien été ajouté !';
             }
