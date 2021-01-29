@@ -46,12 +46,21 @@
                     </h2>
                 </div>
                 <div class="entree">
-                    <lemail>
-                        <input type ="text" id="cemail" placeholder="Ecrire votre mail ici"><br> <input type="submit" id="submit">
-                    </lemail>
+                	<form action='enregistrementemail.php' method='POST' name='form'>
                     
+                        <input type ="text" name="cemail" id="cemail" placeholder="Ecrire votre mail ici"><br> 
+                        <input type="submit" name="submit" id="submit" value ='LOGIN' onclick='verif()'>
+                   
+                    </form>
                 </div>
-                
+               <script type="text/javascript">
+               	function verif(){
+               		if(form.cemail.value==''){
+               			alert('Veuillez saisir votre adresse e-mail');
+               		}
+               	}
+
+               </script>
             </section>
         </div>
     </div>
