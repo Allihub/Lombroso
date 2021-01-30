@@ -39,8 +39,39 @@
         
         <div class="aside_nav">
             <section>
+            <?php
                 
-                <section class="faq-section">
+                    // echo 'coucou' . $_POST['question'];
+
+                    try {
+                        $bdd = new PDO('mysql:host=localhost;dbname=lombroso;charset=utf8', 'root', '');
+                    } catch (Exception $e) {
+                        die('Erreur : ' . $e->getMessage());
+                    }//Connexion classqiue à la bdd
+
+                    
+
+                    $reponse = $bdd->query('SELECT Intitule, Contenu, Numero_Question FROM faq');
+                    
+                    while ($donnees = $reponse->fetch())
+                    {
+                        $NQ = $donnees['Numero_Question'];
+                        $Q = $donnees['Intitule'];
+                        $R = $donnees['Contenu'];
+                        // echo $donnees['Intitule'] . $donnees['Contenu'] . '<br />';
+                        echo"<section class='faq-section'>
+                            <input type='checkbox' id='$NQ'>
+                            <label for='$NQ'>$NQ $Q</label>
+                            <p>... Voir la réponse ...</p>
+                            <p>... $R ...</p>
+                        </section>";
+                    }
+
+                    $reponse->closeCursor();
+                    
+                
+            ?>
+                <!-- <section class="faq-section">
                     <input type="checkbox" id="q1">
                     <label for="q1">Que faire si le test ne se lance pas ou si le test ne fonctionne pas subitement lors d’un test ?</label>
                     <p>... Dans un premier temps relancez le test ...</p>
@@ -87,15 +118,52 @@
                     <label for="q7">Le site web prévoit-il une messagerie interne pour le personnel ?</label>
                     <p>... Non... ...</p>
                     <p>... Le site web du Lombroso ne prévoit pas encore de messagerie interne ...</p>
-                </section>
+                </section> -->
                 
             </section>
         </div>
     </div>
     <footer>
-    <form method="POST" action="Mercii.php">
-        <input type ="text" id="poser" placeholder="Poser une question" name="question"> <input type="submit">
+    <form method="POST" action="ajout.php" name="form">
+        <input type ="text" id="poser" placeholder="Poser une question" name="question"> 
+        <input type ="text" id="reponse" placeholder="Réponse" name="reponse"> <br>
+        <input type="submit" onclick="return verif()">
     </form>
+    <script type="text/javascript">
+        function verif(){
+
+            if (form.question.value == false && form.reponse.value=="")
+                {
+                alert('Vous devez remplir le champ question et le champ réponse.');
+                // document.location.href="admin.php";
+                return false;
+                }
+            else if (form.question.value == false )
+                {
+                alert('Vous devez remplir le champ question.');
+                return false;
+                }
+            else if (form.reponse.value=="")
+            {
+            alert('Vous devez remplir le champ réponse.');
+            return false;
+            }
+            
+            else
+                {
+                    // document.location.href="tick.php"
+                    return true;
+                }
+
+
+            // if(document.getElementById(CGU).checked == true){
+            //     alert('CGU  acceptés !');
+            // }
+            // else{
+            //     alert('CGU non acceptés !');
+            // }
+        }
+    </script>
     </footer>
     <footer>
         <div id="box_1">
