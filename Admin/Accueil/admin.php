@@ -59,11 +59,15 @@
                 <div class="tick">
                     <lancer>
                         
-                        <form method="post" action="#" name="form">
-                            <input type="text" name="iduser" placeholder="IdUser:"> <br><br>
-                            <input type="checkbox" name="CGU"> J'accepte les <a href="../CGU2/CGU.html" style="color:black" title="CGU">CGU </a> <br>
+                        <form method="get" action="test_email.php" name="form">
+                            <input type="email" name="email" id="email" placeholder="Email du testé:"> <br><br>
+                            <input type="checkbox" name="CGU"> J'accepte les <a href="../CGU2/CGU.html" style="color:black" title="CGU">CGU </a> <br> <br>
+                            
+                            <input type="submit" value="Lancer le test" class="btn-v0" onclick="return verif()">
                         </form>
-                        ​<a href="#" class="btn-v0"  onclick="verif()">Lancer le test</a>
+                        <!-- <a href="#" class="btn-v0"  onclick="verif()">Lancer le test</a> -->
+                        ​
+                        
                     </lancer>
                     
                 </div>
@@ -71,23 +75,29 @@
                 <script type="text/javascript">
                     function verif(){
 
-                        if (form.CGU.checked == false && form.iduser.value=="")
+                        if (form.CGU.checked == false && form.email.value=="")
                             {
-                            alert('Vous devez accepter les cgu et renseigner la case id pour lancer le test.');
+                            alert('Vous devez accepter les cgu et renseigner la case email pour lancer le test.');
+                            // document.location.href="admin.php";
+                            return false;
                             }
                         else if (form.CGU.checked == false )
                             {
                             alert('Vous devez accepter les cgu pour lancer le test.');
+                            return false;
                             }
-                        else if (form.iduser.value=="")
+                        else if (form.email.value=="")
                         {
-                        alert('Vous devez renseigner la case id pour lancer le test.');
+                        alert('Vous devez renseigner la case email pour lancer le test.');
+                        return false;
                         }
                         
                         else
                             {
-                                document.location.href="tick.html"
+                                // document.location.href="tick.php"
+                                return true;
                             }
+
 
                         // if(document.getElementById(CGU).checked == true){
                         //     alert('CGU  acceptés !');
@@ -107,7 +117,7 @@
             <div class="box_1_element">
                 <ul>
                     <li>
-                        <a href="../mail/mail.php">
+                        <a href="../mail/mail.html">
                             <image src= "email.png" title="Mail"></image>
                         </a>
                    </li>

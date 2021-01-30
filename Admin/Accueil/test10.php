@@ -82,7 +82,7 @@
 		    sp[3].innerHTML=ms+" ms";
 		      }
 		   function suivant(){
-		   	document.location.href="fin.html"
+		   	document.location.href="fin.php"
 		   }
 		</script>
 		<!-- //Source : www.exelib.net -->

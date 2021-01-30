@@ -7,17 +7,25 @@
 	<!-- <meta http-equiv="refresh" content="7; URL=http://www.manouvelleadresse.com"> -->
 </head>
 <body>
+	
 	<script type="text/javascript">
 		var sec = 5;
-		// var txt  = document.getElementById('decompte');
+		
+		function miseEnAttente()
+		{
+		 //Traitement
+		 setTimeout(tick, 3000); //On attend 5 secondes avant d'exécuter la fonction
+		}
+		
 		function tick()
 	    {
+
 	        document.getElementById('decompte').innerHTML = "<br>" + 'Vous êtes prêts ? Le test démarre dans: ' + "<br>" + "<br>" + sec ;
 	         
 	        if(sec == 0)
 	        {
 	        	// header('page.html');
-	        	document.location.href="test1.html"
+	        	document.location.href="test1.php"
 	            // document.getElementById('decompte').innerText = 'Terminé !';
 	            // document.getElementById('cache').style.display = 'block';
 	            window.clearInterval(timer);

@@ -3,11 +3,11 @@
 <head>
 	<meta charset="utf-8">
 	<link rel ="stylesheet" type="text/css" href="tick.css">
-	<title>Test4</title>
+	<title>Test9</title>
 </head>
 <body>
 	<h1>
-		Voici le test 4 <br>
+		Voici le test 9 <br>
 		<span class="sous_titre">Insérer les consignes ici</span>
 		<div class="chronometre">
 		  <div class="tim">
@@ -82,7 +82,7 @@
 		    sp[3].innerHTML=ms+" ms";
 		      }
 		   function suivant(){
-		   	document.location.href="test5.html"
+		   	document.location.href="test10.php"
 		   }
 		</script>
 		<!-- //Source : www.exelib.net -->
