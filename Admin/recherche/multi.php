@@ -84,7 +84,11 @@
                 echo "Cet utilisateur n'existe pas";//Vérif qu'on a bien trouvé un utilisateur affichage de ce message sinon
             }
             else{
-                echo "Mail: " . $user["email"]."<br>". "Nom: " . $user["Prenom"]. " " . $user["Nom"]."<br>"."Age: ". $user['Age']." ans"."<br>"."Rôle : ". $user['Type']."<br>";
+                while ($users = $stmt -> fetch())
+                {
+                    echo "Mail: " . $users["email"]."<br>". "Nom: " . $users["Prenom"]. " " . $users["Nom"]."<br>"."Age: ". $users['Age']." ans"."<br>"."Rôle : ". $users['Type']."<br>"."<br>"."<br>";
+                    // echo $users;
+                }  
             }//Affichage des valeurs récupérées
             ?>
 
