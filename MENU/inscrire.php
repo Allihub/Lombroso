@@ -6,7 +6,7 @@
 		 
 			<!-- <img src= "https://moodle.isep.fr/moodle/pluginfile.php/10999/mod_resource/content/1/Infinite_measures.gif"> -->
 		
-		<link rel ="stylesheet" type="text/css" href="Menu.css">
+		<link rel ="stylesheet" type="text/css" href="Inscrire.css">
 	    <head>
 			
 			<meta charset="UTF-8"> 
@@ -21,7 +21,7 @@
 			
 		   	<Titre>INFINITE MEASURES</Titre>
 			<br><br>
-			<form action='connexion.php' method='post'>
+			<form action='demande.php' method='post'>
 			<label for="login"> </label>
 			<input type="Email" id="login" name='login' onchange="" placeholder="Email" >
 			<br><br>
@@ -34,14 +34,27 @@
             <label for="Prenom"> </label>
 			<input type="text" id="Prenom" name='Prenom' placeholder="Prenom">
 
+			<br>
+
+			<p><input type="text" name="age" id="age" placeholder="Âge" pattern="[0-9]*" /></p>
+
+			
+
+			<p><select name="sexe" id="sexe">
+				<option value="">Sexe</option>
+				<option value="F">Femme</option>
+				<option value="M">Homme</option>
+				<option value="Autre">Autre</option>
+			</select></p>
+			
+			
+
+
+			
+			
+			
 			<br><br>
-			
-			
-			
-			
-			
-			<br><br>
-			<input id='sub' type="submit" value ='DEMANDER'>
+			<input id='sub' type="submit" value ='DEMANDER' onclick="return verif(form.login.value, form.Nom.value, form.Prenom.value, form.age.value, form.sexe.value);">
 				
             <br><br>
 
@@ -52,11 +65,20 @@
 			</div>
 				</form>
 			<br>
-			<mdp type="button" onclick=href="mdp.html" >
-				<a href="mdp.html" style="color:lightskyblue"> Mot de passe oublié ? </a>
-			</mdp>
+			
 		 
 			<!-- <input class="champ" type="text" /> -->
+
+			<script>
+				function verif(login, Nom, Prenom, age, sexe)
+				{
+						if (login =="" || Nom =="" || Prenom =="" || age ==""|| sexe =="")
+					{ alert("Merci de remplir tous les champs pour pouvoir demander l'inscription");
+						return false;
+					}
+					return true;
+				}
+			</script>
 		
 		</body>
 		<footer>
