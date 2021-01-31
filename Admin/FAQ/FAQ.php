@@ -127,7 +127,12 @@
     <form method="POST" action="ajout.php" name="form">
         <input type ="text" id="poser" placeholder="Poser une question" name="question"> 
         <input type ="text" id="reponse" placeholder="Réponse" name="reponse"> <br>
-        <input type="submit" onclick="return verif()">
+        <input type="submit" value="Ajouter" onclick="return verif()">
+    </form>
+    <br>
+    <form method="POST" action="suppression.php" name="form2">
+        <input type ="number" id="sup" placeholder="Entrer le numéro" name="sup"> <br>
+        <input type="submit" value="Supprimer la question" onclick="return verif2()">
     </form>
     <script type="text/javascript">
         function verif(){
@@ -162,6 +167,13 @@
             // else{
             //     alert('CGU non acceptés !');
             // }
+        }
+        function verif2(){
+            if (form2.sup.value == "")
+                {
+                alert('Vous devez remplir le numéro de la question à supprimer.');
+                return false;
+                }
         }
     </script>
     </footer>
