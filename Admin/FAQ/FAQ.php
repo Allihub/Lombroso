@@ -125,8 +125,8 @@
     </div>
     <footer>
     <form method="POST" action="ajout.php" name="form">
-        <input type ="text" id="poser" placeholder="Poser une question" name="question"> 
-        <input type ="text" id="reponse" placeholder="Réponse" name="reponse"> <br>
+        <input type ="text" id="poser" placeholder="Ajouter une question" name="question"> 
+        <input type ="text" id="reponse" placeholder="Ajouter la réponse" name="reponse"> <br>
         <input type="submit" value="Ajouter" onclick="return verif()">
     </form>
     <br>
