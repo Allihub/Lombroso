@@ -7,9 +7,16 @@ session_start();
 	<title>enregistrement mail</title>
 
 	<?php
-	
+		$regex = "/^[^0-9][_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/";
+		
+
 		if($_POST['cemail']==""){
 			echo "<meta http-equiv='refresh'content='0;URL=mailu.php'>";
+		}
+
+		elseif(!preg_match($regex, $_POST['cemail'])) {
+			echo'Veuillez saisir une adresse email valide';
+			echo "<meta http-equiv='refresh'content='2;URL=mailu.php'>";
 		}
 		else{
 			
