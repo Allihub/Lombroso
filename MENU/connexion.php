@@ -52,7 +52,7 @@
 
 						$estconnecte = TRUE ;
 						$_SESSION['utilisateurConnecte' ] = $estconnecte;
-						echo ' Vous etes connectés';
+						echo ' Vous etes connecté';
 						echo "<meta http-equiv='refresh'content='1;URL=../Admin/Accueil/admin.php'>";//changer la redirection mettre la nouvelle page
 					}
 
@@ -63,7 +63,7 @@
 
 						$estconnecte = TRUE ;
 						$_SESSION['utilisateurConnecte' ] = $estconnecte;
-						echo ' Vous etes connectés';
+						echo ' Vous etes connecté';
 						echo "<meta http-equiv='refresh'content='1;URL=../User/User/User.php'>";//changer la redirection mettre la nouvelle page
 					}
 				}
