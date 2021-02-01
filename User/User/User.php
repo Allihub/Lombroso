@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="User.css">
+    <link rel="stylesheet" href="admin.css">
     <title>User</title>
 </head>
 
@@ -47,11 +47,10 @@
                 <div class="bottom">
                     <article>
                         
-                        <p>
-                            Image de fond
-                            <br><br>
-                            
-                        </p>
+                        <a>
+                            <image src= "detectmensonges.jpg" title="Profil"></image>
+                        </a>
+
                     </article>
                     
                                         

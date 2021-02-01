@@ -47,11 +47,10 @@
                 <div class="bottom">
                     <article>
                         
-                        <p>
-                            Image de fond
-                            <br><br>
-                            
-                        </p>
+                        <a>
+                            <image src= "detectmensonges.jpg" title="Profil"></image>
+                        </a>
+
                     </article>
                     
                                         
