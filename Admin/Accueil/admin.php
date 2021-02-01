@@ -23,7 +23,11 @@
                 </ul>
                 
             </div>
-            <div class="box_0_element"><a href="../Aide/aide.html" style="color:black" title="Aide">Lombroso </a></div>
+            <div class="box_0_element"><?php
+		
+        echo "<a href='../../MENU/deconnexion.php' >Se déconnecter</a>"."<br>";
+        
+        ?><br><br><a href="../Aide/aide.html" style="color:black" title="Aide">Lombroso </a></div>
             <div class="box_0_element">
                 <ul>
                     <li>
@@ -46,11 +50,7 @@
                         <p>
                             Image de fond
                             <br><br>
-                            <?php
-		
-                            echo "<a href='../../MENU/deconnexion.php' >Se déconnecter</a>"."<br>";
                             
-                            ?>
                         </p>
                     </article>
                     

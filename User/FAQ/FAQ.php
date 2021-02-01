@@ -39,8 +39,41 @@
         
         <div class="aside_nav">
             <section>
+
+            <?php
                 
-                <section class="faq-section">
+                    // echo 'coucou' . $_POST['question'];
+
+                    try {
+                        $bdd = new PDO('mysql:host=localhost;dbname=lombroso;charset=utf8', 'root', '');
+                    } catch (Exception $e) {
+                        die('Erreur : ' . $e->getMessage());
+                    }//Connexion classqiue à la bdd
+
+                    
+
+                    $reponse = $bdd->query('SELECT Intitule, Contenu, Numero_Question FROM faq');
+                    
+                    while ($donnees = $reponse->fetch())
+                    {
+                        $NQ = $donnees['Numero_Question'];
+                        $Q = $donnees['Intitule'];
+                        $R = $donnees['Contenu'];
+                        // echo $donnees['Intitule'] . $donnees['Contenu'] . '<br />';
+                        echo"<section class='faq-section'>
+                            <input type='checkbox' id='$NQ'>
+                            <label for='$NQ'> $Q</label>
+                            <p>... Voir la réponse ...</p>
+                            <p>... $R ...</p>
+                        </section>";
+                    }
+
+                    $reponse->closeCursor();
+                    
+                
+            ?>
+                
+                <!-- <section class="faq-section">
                     <input type="checkbox" id="q1">
                     <label for="q1">Que faire si le test ne se lance pas ou si le test ne fonctionne pas subitement lors d’un test ?</label>
                     <p>... Dans un premier temps relancez le test ...</p>
@@ -87,7 +120,7 @@
                     <label for="q7">Le site web prévoit-il une messagerie interne pour le personnel ?</label>
                     <p>... Non... ...</p>
                     <p>... Le site web du Lombroso ne prévoit pas encore de messagerie interne ...</p>
-                </section>
+                </section> -->
                 
             </section>
         </div>

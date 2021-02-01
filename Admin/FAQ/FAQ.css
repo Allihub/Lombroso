@@ -117,7 +117,8 @@ footer {
     /*border: 3px solid orange;*/
     height: calc(10vh - 9px);
     text-align: center;
-    margin-top: 70px;
+    /* margin-top: 70px; */
+    margin-bottom: 20px;
 }
 
 #box_1 {
@@ -125,7 +126,8 @@ footer {
     align-items: stretch;
     height: 60px;
     /*border: 2px solid purple;*/
-    justify-content: space-between
+    justify-content: space-between;
+    margin-top: 200px;
 }
 
 .box_1_element:nth-child(1) {
@@ -238,4 +240,9 @@ footer {
 input[type="text"] {
     width:50%;
     height: 50px;
+}
+
+input[type="number"] {
+    width:40%;
+    height: 40px;
 }
