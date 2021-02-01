@@ -32,7 +32,7 @@ session_start();
                 <ul>
                     <li>
                         <a href="../profiladmin/profiladmin.php">
-                            <image src= "user.png" title="Profil"></image>
+                            <image src= "add-user.png" title="Profil"></image>
                         </a>
                    </li>
                 </ul>
@@ -43,6 +43,13 @@ session_start();
         
         <div class="aside_nav">
             <section>
+                
+                <p>
+                    Role : Administrateur <br>
+                    Nom : <?php echo $_SESSION['prenom']; ?> <br>
+                    Prenom : <?php echo $_SESSION['nom']; ?> <br>
+                    Age : <?php echo $_SESSION['age']; ?> <br>
+                    Email : <?php echo $_SESSION['mail']; ?> <br>
                 
                 
                 
