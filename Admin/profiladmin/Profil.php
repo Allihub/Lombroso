@@ -59,7 +59,9 @@ session_start();
                 }
                 else{
                     echo "Mail: " . $user["email"]."<br><br>". "Nom: " . $user["Prenom"]. " " . $user["Nom"]."<br><br>"."Age: ". $user['Age']." ans"."<br><br>"."Sexe: ". $user['Sexe']."<br><br>"."Rôle : ". $user['Type']."<br><br>"."Email secondaire : ". $user['email2']."<br><br>";
-                }//Affichage des valeurs récupérées                
+                }//Affichage des valeurs récupérées
+
+               
             ?>
 
                 <ul>
@@ -78,6 +80,9 @@ session_start();
                    </li>
                 </ul>
                 
+
+
+
                 
             </section>
         </div>
