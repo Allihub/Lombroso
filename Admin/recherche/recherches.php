@@ -32,7 +32,7 @@ session_start();
             <div class="box_0_element">
                 <ul>
                     <li>
-                        <a href="../profiladmin/profiladmin.php">
+                        <a href="../profiladmin/profil.php">
                             <image src= "user.png" title="Profil"></image>
                         </a>
                    </li>
