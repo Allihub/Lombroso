@@ -46,11 +46,11 @@ session_start();
                 
                 <p>
                     Role : Administrateur <br>
-                    Nom : <?php echo $_SESSION['prenom']; ?> <br>
-                    Prenom : <?php echo $_SESSION['nom']; ?> <br>
-                    Age : <?php echo $_SESSION['age']; ?> <br>
-                    Email : <?php echo $_SESSION['mail']; ?> <br>
-                
+                    Nom : <?php echo $_SESSION['Prenom']; ?> <br>
+                    Prenom : <?php echo $_SESSION['Nom']; ?> <br>
+                    Age : <?php echo $_SESSION['Age']; ?> <br>
+                    Email : <?php echo $_SESSION['email']; ?> <br>
+                </p>
                 
                 
             </section>

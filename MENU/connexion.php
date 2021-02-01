@@ -24,7 +24,7 @@
 				}// GESTION DES ERREURS SUR LE MOT DE PASSE ET L EMAIL
 
 				if($ok==TRUE){
-					$bdd= new PDO('mysql:host=localhost;dbname=ProjetA1', 'root', 'root');
+					$bdd= new PDO('mysql:host=localhost;dbname=lombroso', 'root', '');
 					$bdd -> setAttribute (PDO :: ATTR_ERRMODE , PDO :: ERRMODE_EXCEPTION );
 					$sql="select email, Mot_De_Passe, Type FROM utilisateur  WHERE email LIKE ?";
 					

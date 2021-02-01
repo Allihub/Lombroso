@@ -46,7 +46,7 @@ session_start();
 
             <?php
             try {
-                $bdd= new PDO('mysql:host=localhost;dbname=ProjetA1', 'root', 'root');
+                $bdd= new PDO('mysql:host=localhost;dbname=lombroso', 'root', '');
             } catch (Exception $e) {
                 die('Erreur : ' . $e->getMessage());
             }
