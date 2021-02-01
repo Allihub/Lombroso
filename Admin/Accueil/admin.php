@@ -32,7 +32,7 @@
                 <ul>
                     <li>
                         <a href="../profiladmin/profiladmin.php">
-                            <image src= "user.png" title="Profil"></image>
+                            <image src= "user.png" ></image>
                         </a>
                    </li>
                 </ul>

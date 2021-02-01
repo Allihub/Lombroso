@@ -48,7 +48,7 @@
                     <article>
                         
                         <a>
-                            <image src= "detectmensonges.jpg" title="Profil"></image>
+                            <image src= "detectmensonges.jpg" ></image>
                         </a>
 
                     </article>
