@@ -12,7 +12,7 @@ session_start();
 <body>
 	<h1>
 		Voici le test 2 <br>
-		<span class="sous_titre">Insérer les consignes ici</span>
+		<span class="sous_titre">Test de reconnaissance sonore</span>
 		<div class="chronometre">
 		  <div class="tim">
 		  	<span >0 h</span> :
@@ -21,10 +21,10 @@ session_start();
 		  	<span >0 ms</span>
 
 		  </div>
-		  <button id="start" onclick="start()">Start</button>
-		  <button id="stop" onclick="stop()" >Stop</button>
-		  <button id="reset" onclick="reset()" >Reset</button>
-		  <button id="suivant" onclick="suivant()" >suivant</button>
+		  <button id="start" onclick="start()" class="btn">Start</button>
+		  <button id="stop" onclick="stop()" class="btn">Stop</button>
+		  <button id="reset" onclick="reset()" class="btn">Reset</button>
+		  <button id="suivant" onclick="suivant()" class="btn">suivant</button>
 		</div>
 		<!-- //Source : www.exelib.net -->
 		<!-- <input type="submit" name="start" placeholder="commencer"> -->
