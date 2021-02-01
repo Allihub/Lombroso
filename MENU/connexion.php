@@ -26,7 +26,7 @@
 				if($ok==TRUE){
 					$bdd= new PDO('mysql:host=localhost;dbname=ProjetA1', 'root', 'root');
 					$bdd -> setAttribute (PDO :: ATTR_ERRMODE , PDO :: ERRMODE_EXCEPTION );
-					$sql="select email, Mot_De_Passe, Type FROM UTILISATEUR  WHERE email LIKE ?";
+					$sql="select email, Mot_De_Passe, Type FROM utilisateur  WHERE email LIKE ?";
 					
 					$statement = $bdd -> prepare ( $sql );
 					$statement -> execute (array($_POST['login']));
