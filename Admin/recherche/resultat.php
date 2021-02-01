@@ -50,9 +50,10 @@ session_start();
             } catch (Exception $e) {
                 die('Erreur : ' . $e->getMessage());
             }
-            $stmt = $bdd->prepare("SELECT email, Nom, Age, prenom, Type FROM utilisateur where email = ?");
+            $stmt = $bdd->prepare("SELECT email, Nom, Age, prenom, Type, Sexe FROM utilisateur where email = ?");
             $stmt->execute(array($_POST['recherche']));
             $user = $stmt->fetch();
+            $exist=0;
             if($user ==""){
                 echo "Cet utilisateur n'existe pas";
                 $exist=1;
@@ -60,7 +61,7 @@ session_start();
 
             }
             else{
-                echo "Mail: " . $user["email"]."<br>". "Nom: " . $user["prenom"]. " " . $user["Nom"]."<br>"."Age: ". $user['Age']." ans"."<br>"."Rôle : ". $user['Type']."<br>";
+                echo "Mail: " . $user["email"]."<br>". "Nom: " . $user["prenom"]. " " . $user["Nom"]."<br>"."Age: ". $user['Age']." ans"."<br>"."Sexe : ". $user['Sexe']."<br>"."Rôle : ". $user['Type']."<br>";
             }
 
             ?>
@@ -76,7 +77,7 @@ session_start();
 
 
             if(count($donnees)>0 and $exist!=1 and $donnees!=NULL){
-            echo "Vos resultats en fonction des questions sont : ".$donnees["Numero_Test"]."<br>". "Question 1: ".$donnees["Question1"]."<br> "."Question 2 : ".$donnees["Question2"]."<br>"."Question 3 : ".$donnees["Question3"]."<br>"."Question4 : ".$donnees["Question4"]."<br>"."Question5 :".$donnees["Question5"]."<br>"."Question 6 : ".$donnees["Question6"]."<br>"."Question 7 : ".$donnees["Question7"]."<br>"."Question 8 : ".$donnees["Question8"]."<br>"."Question 9 : ".$donnees["Question9"]."<br>"."Question 10 : ".$donnees["Question10"]."<br>";
+            echo "Vos resultats du test numéro ".$donnees["Numero_Test"]." sont : "."<br>". "Question 1: ".$donnees["Question1"]."<br> "."Question 2 : ".$donnees["Question2"]."<br>"."Question 3 : ".$donnees["Question3"]."<br>"."Question4 : ".$donnees["Question4"]."<br>"."Question5 :".$donnees["Question5"]."<br>"."Question 6 : ".$donnees["Question6"]."<br>"."Question 7 : ".$donnees["Question7"]."<br>"."Question 8 : ".$donnees["Question8"]."<br>"."Question 9 : ".$donnees["Question9"]."<br>"."Question 10 : ".$donnees["Question10"]."<br>";
                 
             }
             else{
