@@ -45,7 +45,7 @@
 					
 					$_SESSION['UTILISATEUR'] = $statement->fetchAll(PDO::FETCH_NUM);
 					$_SESSION['enreg']=$_POST['login'];
-					echo $_SESSION['enreg'];
+					
 
 					if($donnees['Type']=='administrateur' or $donnees['Type']=='gestionnaire'){
 					if (isset($_SESSION['UTILISATEUR'])) {

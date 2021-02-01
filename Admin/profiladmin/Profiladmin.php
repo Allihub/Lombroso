@@ -61,7 +61,7 @@ session_start();
                     <option value="user">Utilisateur</option>
                 </select></p>
                 <p><input type="submit" value="Ajouter ce profil" name="ajouter" id="ajouter" onclick="return verif(document.form.mail.value, document.form.nom.value, document.form.prenom.value, document.form.mdp.value, document.form.age.value, document.form.sexe.value, document.form.role.value);" />
-                    <input type="submit" value="Enregistrer les modifications" name="modifier" id="modifier" /></p>
+                    <input type="submit" value="Modifier le profil" name="modifier" id="modifier" /></p>
                     <p><input type="submit" value="Supprimer ce profil" name="supprimer" id="supprimer" />
                     <input type="submit" value="Bannir l'utilisateur" name="ban" id="ban" onclick="return sure();"/></p>
                 </form>
