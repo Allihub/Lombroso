@@ -12,6 +12,7 @@ header {
     /*border: 3px solid red;*/
     text-align: center;
     height: calc(22vh - 30px);
+    background-color: gainsboro;
 }
 
 #box_0 {
@@ -115,9 +116,10 @@ section .tick {
 
 footer {
     /*border: 3px solid orange;*/
-    height: calc(10vh - 9px);
+    height: calc(20vh - 9px);
     text-align: center;
     /* margin-top: -2px; */
+    background-color: gainsboro;
 }
 
 #box_1 {
