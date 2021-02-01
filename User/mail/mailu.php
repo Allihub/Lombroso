@@ -1,3 +1,7 @@
+<?php
+// On démarre la session AVANT d'écrire du code HTML
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,7 +27,7 @@
                 </ul>
                 
             </div>
-            <div class="box_0_element"><a href="../Aide/aide.html" style="color:black" title="Aide">Lombroso </a></div>
+            <div class="box_0_element"><a href="../Aide/aide.html" style="color:black;font-size:30px;text-decoration:none" title="Aide">Aide </a></div>
             <div class="box_0_element">
                 <ul>
                     <li>
