@@ -27,7 +27,7 @@
 		
         echo "<a href='../../MENU/deconnexion.php' >Se déconnecter</a>"."<br>";
         
-        ?><br><br><a href="../Aide/aide.html" style="color:black" title="Aide">Lombroso </a></div>
+        ?><br><br><a href="../Aide/aide.html" style="color:black;font-size:30px" title="Aide">Aide </a></div>
             <div class="box_0_element">
                 <ul>
                     <li>
