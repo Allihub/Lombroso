@@ -16,14 +16,14 @@
             <div class="box_0_element">
                 <ul>
                     <li>
-                        <a href="../User/User.php">
+                        <a href="../Accueil/admin.php">
                             <image src= "logo-alex_Plan de travail 1.png" title="Menu"></image>
                         </a>
                    </li>
                 </ul>
                 
             </div>
-            <div class="box_0_element"><a href="../Aide/aide.html" style="color:black" title="Aide">Lombroso </a></div>
+            <div class="box_0_element"><a href="../Aide/aide.html" style="color:black;font-size:30px;text-decoration:none" title="Aide">Aide </a></div>
             <div class="box_0_element">
                 <ul>
                     <li>
@@ -54,11 +54,25 @@
                         </a>
                         
                     </div>
-                    
+                    <script type="text/javascript">                   
+
+                     function validation() {
+
+
+ if (confirm( "êtes vous sûr de les avoir entièrement lues et comprises ?" ) ) {
+        document.location.href ="file:///C:/Users/rayhan/Documents/GitHub/lombroso2/Admin/Accueil/admin.php";
+    } else {
+             return false
+    }
+
+}
+
+</script>
+
                 </div>
                 <espace>
                     </espace>
-                 <button class="validation" href="Merci.php"><h3> En cliquant sur ce boutton vous déclarez avoir pris connaissance des conditions génerales d'utilisations  </h3></button>
+                 <button class="validation"  onclick="validation()" ><h3> En cliquant sur ce boutton vous déclarez avoir pris connaissance des conditions génerales d'utilisations  </h3></button>
             </section>
         </div>
     </div>
