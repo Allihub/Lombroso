@@ -149,3 +149,11 @@ footer {
 .box_1_element:nth-child(3) {
     /*background-color: rgba(0, 0, 255, 0.5);*/
 }
+
+
+#sous-titre {
+width:200px;
+color: lightskyblue;
+text-decoration: none;
+}
+
