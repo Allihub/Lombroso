@@ -27,7 +27,7 @@
 		
         echo "<a href='../../MENU/deconnexion.php' >Se déconnecter</a>"."<br>";
         
-        ?><br><br><a href="../Aide/aide.html" style="color:black" title="Aide">Lombroso </a></div>
+        ?><br><br><a href="../Aide/aide.html" style="color:black;font-size:30px;text-decoration:none" title="Aide">Aide </a></div>
             <div class="box_0_element">
                 <ul>
                     <li>
@@ -47,11 +47,10 @@
                 <div class="bottom">
                     <article>
                         
-                        <p>
-                            Image de fond
-                            <br><br>
-                            
-                        </p>
+                        <a>
+                            <image src= "detectmensonges.jpg" title="Profil"></image>
+                        </a>
+
                     </article>
                     
                                         

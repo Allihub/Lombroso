@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="User.css">
+    <link rel="stylesheet" href="admin.css">
     <title>User</title>
 </head>
 
@@ -27,11 +27,11 @@
 		
         echo "<a href='../../MENU/deconnexion.php' >Se déconnecter</a>"."<br>";
         
-        ?><br><br><a href="../Aide/aide.html" style="color:black" title="Aide">Lombroso </a></div>
+        ?><br><br><a href="../Aide/aide.html" style="color:black;font-size:30px;text-decoration:none" title="Aide">Aide </a></div>
             <div class="box_0_element">
                 <ul>
                     <li>
-                        <a href="../profiluser/profiluser.html">
+                        <a href="../profiluser/profiluser.php">
                             <image src= "user.png" title="Profil"></image>
                         </a>
                    </li>
@@ -47,11 +47,10 @@
                 <div class="bottom">
                     <article>
                         
-                        <p>
-                            Image de fond
-                            <br><br>
-                            
-                        </p>
+                        <a>
+                            <image src= "detectmensonges.jpg" title="Profil"></image>
+                        </a>
+
                     </article>
                     
                                         
