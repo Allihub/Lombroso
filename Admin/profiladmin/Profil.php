@@ -40,17 +40,46 @@ session_start();
         </div>
     </header>
     <div class="under_header">
-        
+        <ul>
+            <li>
+                <a href="../profiladmin/profiladmin.php">
+                    <image src= "add-user.png" title="Gestion des profils"></image>
+                </a>
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                <a href="../recherche/recherches.php">
+                    <image src= "magnifying-glass.png" title="Recherche"></image>
+                </a>
+            </li>
+        </ul>
         <div class="aside_nav">
+
+        
+            
             <section>
+
+            
                 
-                <p>
-                    Role : Administrateur <br>
-                    Nom : <?php echo $_SESSION['Prenom']; ?> <br>
-                    Prenom : <?php echo $_SESSION['Nom']; ?> <br>
-                    Age : <?php echo $_SESSION['Age']; ?> <br>
-                    Email : <?php echo $_SESSION['email']; ?> <br>
-                </p>
+            <?php
+            try {
+            $bdd = new PDO('mysql:host=localhost;dbname=lombroso;charset=utf8', 'root', '');
+            } catch (Exception $e) {
+            die('Erreur : ' . $e->getMessage()); //Connexion à la BDD
+            }
+            $email = $_SESSION['enreg'];
+            $req = $bdd->prepare('SELECT * FROM utilisateur WHERE email= ?');
+            $req->execute(array(htmlspecialchars($email)));
+            $user = $req->fetch();//Stockage dans un variable des données récup
+            if($user ==""){
+                echo "Cet utilisateur n'existe pas";//Vérif qu'on a bien trouvé un utilisateur affichage de ce message sinon
+            }
+            else{
+                echo "Mail: " . $user["email"]."<br><br>". "Nom: " . $user["Prenom"]. " " . $user["Nom"]."<br><br>"."Age: ". $user['Age']." ans"."<br><br>"."Sexe: ". $user['Sexe']."<br><br>"."Rôle : ". $user['Type']."<br><br>"."Email secondaire : ". $user['email2']."<br><br>";
+            }//Affichage des valeurs récupérées
+            ?>
                 
                 
             </section>
