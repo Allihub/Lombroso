@@ -12,7 +12,6 @@ header {
     /*border: 3px solid red;*/
     text-align: center;
     height: calc(22vh - 26px);
-    background-color: gainsboro;
 }
 
 #box_0 {
@@ -202,9 +201,8 @@ display: block;
 
 footer {
     /*border: 3px solid orange;*/
-    height: calc(20vh - 9px);
+    height: calc(10vh - 9px);
     text-align: center;
-    background-color: gainsboro;
 }
 
 #box_1 {
