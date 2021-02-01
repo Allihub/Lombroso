@@ -48,8 +48,6 @@ session_start();
                 <p><input type="text" name="prenom" id="prenom" placeholder="Prénom" pattern="[a-zA-ZÀ-ÿ]*" /> </p>
                 <p><input type="password" name="mdp" id="mdp" placeholder="Mot de passe"/></p>
                 <p><input type="text" name="age" id="age" placeholder="Âge" pattern="[0-9]*" /></p>
-                <p><input type="text" name="test" id="test" placeholder="Dernier test effectué le :"/></p>
-                <p><input type="text" name="resultat" id="resultat" placeholder="Résultat du dernier test :"/></p>
                 <p><select name="sexe" id="sexe">
                     <option value="">Non spécifié</option>
                     <option value="F">Femme</option>
