@@ -12,6 +12,7 @@ header {
     /*border: 3px solid red;*/
     text-align: center;
     height: calc(22vh - 30px);
+    background-color: gainsboro;
 }
 
 #box_0 {
@@ -115,10 +116,11 @@ section .tick {
 
 footer {
     /*border: 3px solid orange;*/
-    height: calc(10vh - 9px);
+    height: calc(30vh - 9px);
     text-align: center;
     /* margin-top: 70px; */
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+    background-color: gainsboro;
 }
 
 #box_1 {
@@ -127,7 +129,8 @@ footer {
     height: 60px;
     /*border: 2px solid purple;*/
     justify-content: space-between;
-    margin-top: 200px;
+    /* margin-top: 200px; */
+    /* margin-top: 50px; */
 }
 
 .box_1_element:nth-child(1) {
