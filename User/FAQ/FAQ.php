@@ -31,7 +31,7 @@ session_start();
             <div class="box_0_element">
                 <ul>
                     <li>
-                        <a href="../profiluser/profiluser.html">
+                        <a href="../profiluser/profiluser.php">
                             <image src= "user.png" title="Profil"></image>
                         </a>
                    </li>
@@ -149,7 +149,7 @@ session_start();
             <div class="box_1_element">
                 <ul>
                     <li>
-                        <a href="../FAQ/FAQ.html">
+                        <a href="../FAQ/FAQ.php">
                             <image src= "help.png" title="FAQ"></image>
                         </a>
                    </li>
