@@ -12,7 +12,7 @@ $role = 'administrateur';
 
 
 try {
-    $bdd= new PDO('mysql:host=localhost;dbname=lombroso;charset=utf8', 'root', '');
+    $bdd= new PDO('mysql:host=localhost;dbname=lombroso', 'root', '');
 } catch (Exception $e) {
     die('Erreur : ' . $e->getMessage());
 }//Connexion classqiue à la bdd

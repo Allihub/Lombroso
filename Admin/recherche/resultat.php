@@ -31,7 +31,7 @@ session_start();
             <div class="box_0_element">
                 <ul>
                     <li>
-                        <a href="../profiladmin/Profil.php">
+                        <a href="../profiladmin/profil.php">
                             <image src= "user.png" title="Profil"></image>
                         </a>
                    </li>
@@ -46,7 +46,7 @@ session_start();
 
             <?php
             try {
-                $bdd= new PDO('mysql:host=localhost;dbname=lombroso;charset=utf8', 'root', '');
+                $bdd= new PDO('mysql:host=localhost;dbname=lombroso', 'root', '');
             } catch (Exception $e) {
                 die('Erreur : ' . $e->getMessage());
             }
