@@ -31,7 +31,7 @@ session_start();
             <div class="box_0_element">
                 <ul>
                     <li>
-                        <a href="../profiladmin/profil.php">
+                        <a href="../profiladmin/Profil.php">
                             <image src= "user.png" title="Profil"></image>
                         </a>
                    </li>
@@ -44,14 +44,45 @@ session_start();
         <div class="aside_nav">
             <section>
                 
-                <p>
-                    Role : Administrateur <br>
-                    Nom : <?php echo $_SESSION['prenom']; ?> <br>
-                    Prenom : <?php echo $_SESSION['nom']; ?> <br>
-                    Age : <?php echo $_SESSION['age']; ?> <br>
-                    Email : <?php echo $_SESSION['mail']; ?> <br>
+            <?php
+                try {
+                $bdd = new PDO('mysql:host=localhost;dbname=lombroso;charset=utf8', 'root', '');
+                } catch (Exception $e) {
+                die('Erreur : ' . $e->getMessage()); //Connexion à la BDD
+                }
+                $email = $_SESSION['enreg'];
+                $req = $bdd->prepare('SELECT * FROM utilisateur WHERE email= ?');
+                $req->execute(array(htmlspecialchars($email)));
+                $user = $req->fetch();//Stockage dans un variable des données récup
+                if($user ==""){
+                    echo "Cet utilisateur n'existe pas";//Vérif qu'on a bien trouvé un utilisateur affichage de ce message sinon
+                }
+                else{
+                    echo "Mail: " . $user["email"]."<br><br>". "Nom: " . $user["Prenom"]. " " . $user["Nom"]."<br><br>"."Age: ". $user['Age']." ans"."<br><br>"."Sexe: ". $user['Sexe']."<br><br>"."Rôle : ". $user['Type']."<br><br>"."Email secondaire : ". $user['email2']."<br><br>";
+                }//Affichage des valeurs récupérées
+
+               
+            ?>
+
+                <ul>
+                    <li>
+                        <a href="../profiladmin/Profiladmin.php">
+                            <image src= "add-user.png" title="Profil"></image>
+                        </a>
+                   </li>
+                </ul>
+
+                <ul>
+                    <li>
+                        <a href="../recherche/recherches.php">
+                            <image src= "search.png" title="Profil"></image>
+                        </a>
+                   </li>
+                </ul>
                 
-                
+
+
+
                 
             </section>
         </div>

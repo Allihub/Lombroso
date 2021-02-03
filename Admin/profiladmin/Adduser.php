@@ -12,7 +12,7 @@ $role = 'administrateur';
 
 
 try {
-    $bdd= new PDO('mysql:host=localhost;dbname=ProjetA1', 'root', 'root');
+    $bdd= new PDO('mysql:host=localhost;dbname=lombroso;charset=utf8', 'root', '');
 } catch (Exception $e) {
     die('Erreur : ' . $e->getMessage());
 }//Connexion classqiue à la bdd
@@ -48,7 +48,7 @@ if ($role == 'administrateur') {
         {
             if ($mailcheck == "") //Si le mail de l'utilisateur est vide, donc qu'il n'existe pas encore on peut l'ajouter
             {
-                if(preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#?$%]{8,16}$/', $mdp)) {
+                if(preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#?$%&]{8,25}$/', $mdp)) {
                     
                 
                 // Ajout de l'utilisateur à l'aide d'une requête préparée
@@ -58,8 +58,8 @@ if ($role == 'administrateur') {
 
                 echo 'L\'utilisateur a bien été ajouté !';
             }
-             elseif(!preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#?$%]{8,16}$/', $mdp)){
-                echo"Veuillez choisir un mot de passe plus pertinent. Votre mot de passe doit contenir AU MOINS UNE LETTRE MAJUSCULE, UNE LETTRE MINISCULE, UN CHIFFRE ET UN CARACTERE SPÉCIAL";
+             elseif(!preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#?$%&]{8,25}$/', $mdp)){
+                echo"Veuillez choisir un mot de passe plus pertinent. Votre mot de passe entre 8 et 25 caractères doit contenir AU MOINS UNE LETTRE MAJUSCULE, UNE LETTRE MINISCULE, UN CHIFFRE ET UN CARACTERE SPÉCIAL !@#?$%&";
              }
             } else //Sinon message comme quoi l'utilisateur est déjà présent dans la bdd
                 {

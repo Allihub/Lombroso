@@ -18,7 +18,7 @@ session_start();
 		}
 		else{
 			
-    		$bdd= new PDO('mysql:host=localhost;dbname=ProjetA1', 'root', 'root');
+    		$bdd= new PDO('mysql:host=localhost;dbname=lombroso;charset=utf8', 'root', '');
 
 			$bdd -> setAttribute (PDO :: ATTR_ERRMODE , PDO :: ERRMODE_EXCEPTION );
 			$sql="UPDATE utilisateur SET email2 = ? WHERE email=?";

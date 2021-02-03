@@ -32,7 +32,7 @@ session_start();
             <div class="box_0_element">
                 <ul>
                     <li>
-                        <a href="../profiladmin/profil.php">
+                        <a href="../profiladmin/Profil.php">
                             <image src= "user.png" title="Profil"></image>
                         </a>
                    </li>
@@ -46,7 +46,7 @@ session_start();
             <section>
                 <form name="form1" action= 'resultat.php' method="post" id="recherche" onsubmit="return verif_champ(document.form1.recherche.value);">
                 		<s>RECHERCHE</s> <br> <br>
-				<input type="search" name="recherche" id="recherche" placeholder="exemple@mail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"/> <br> <br>
+				<input type="email" name="recherche" id="recherche" placeholder="exemple@mail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"/> <br> <br>
 				<form id="soumettre1" style="display: block;"> 
 						<input type="submit" id="test" value = " SOUMETTRE ">
 				</form> <br> 

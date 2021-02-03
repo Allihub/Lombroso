@@ -62,7 +62,7 @@ session_start();
                     echo "Cet utilisateur n'existe pas";//Vérif qu'on a bien trouvé un utilisateur affichage de ce message sinon
                 }
                 else{
-                    echo "Mail: " . $user["email"]."<br><br>". "Nom: " . $user["Prenom"]. " " . $user["Nom"]."<br><br>"."Age: ". $user['Age']." ans"."<br><br>"."Rôle : ". $user['Type']."<br><br>"."Email secondaire : ". $user['email2']."<br><br>";
+                    echo "Mail: " . $user["email"]."<br><br>". "Nom: " . $user["Prenom"]. " " . $user["Nom"]."<br><br>"."Age: ". $user['Age']." ans"."<br><br>"."Sexe: ". $user['Sexe']."<br><br>"."Rôle : ". $user['Type']."<br><br>"."Email secondaire : ". $user['email2']."<br><br>";
                 }//Affichage des valeurs récupérées
                 ?>
             </section>

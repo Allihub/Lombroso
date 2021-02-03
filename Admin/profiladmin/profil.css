@@ -11,7 +11,7 @@
 header {
     /*border: 3px solid red;*/
     text-align: center;
-    height: calc(22vh - 1px);
+    height: calc(22vh - 26px);
     background-color: gainsboro;
 }
 
@@ -63,7 +63,7 @@ ul li a img{ /*on règle les paramètres de l'image*/
 .under_header {
     display: block;
     min-height: 65vh;
-    margin-top: -100px;
+    margin-top: 10px;
 }
 
 section {

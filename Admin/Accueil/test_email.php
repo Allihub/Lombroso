@@ -12,7 +12,6 @@ session_start();
 <body>
 	
 	<?php
-		session_start();
 		try {
 		    $bdd = new PDO('mysql:host=localhost;dbname=lombroso;charset=utf8', 'root', '');
 		} catch (Exception $e) {

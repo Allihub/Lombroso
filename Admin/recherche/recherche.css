@@ -89,10 +89,10 @@ section .bottom article {
 }
 
 s{
-    color: blue;
+    /* color: blue; */
     text-decoration: none;
     font-size: 1.6em;
-    font-family: comic sans ms;
+    /* font-family: comic sans ms; */
     font-size-adjust: 10px;
 }
 
@@ -113,6 +113,11 @@ section .tick {
 }
 
 input[type="text"] {
+    width:20%;
+    height: 30px;
+}
+
+input[type="email"] {
     width:20%;
     height: 30px;
 }

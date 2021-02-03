@@ -1,18 +1,14 @@
-<?php
-// On démarre la session AVANT d'écrire du code HTML
-session_start();
-?>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<link rel ="stylesheet" type="text/css" href="tick.css">
-	<title>Test1</title>
+	<title>Test8</title>
 </head>
 <body>
 	<h1>
-		Voici le test 1 <br>
-		<span class="sous_titre">Réaction à un signal sonore</span>
+		Voici le test 8 <br>
+		<span class="sous_titre">Insérer les consignes ici</span>
 		<div class="chronometre">
 		  <div class="tim">
 		  	<span >0 h</span> :
@@ -21,10 +17,10 @@ session_start();
 		  	<span >0 ms</span>
 
 		  </div>
-		  <button id="start" onclick="start()" class="btn">Start</button>
-		  <button id="stop" onclick="stop()" class="btn">Stop</button>
-		  <button id="reset" onclick="reset()" class="btn">Reset</button>
-		  <button id="suivant" onclick="suivant()" class="btn">Suivant</button>
+		  <button id="start" onclick="start()">Start</button>
+		  <button id="stop" onclick="stop()" >Stop</button>
+		  <button id="reset" onclick="reset()" >Reset</button>
+		  <button id="suivant" onclick="suivant()" >suivant</button>
 		</div>
 		<!-- //Source : www.exelib.net -->
 		<!-- <input type="submit" name="start" placeholder="commencer"> -->
@@ -86,7 +82,7 @@ session_start();
 		    sp[3].innerHTML=ms+" ms";
 		      }
 		   function suivant(){
-		   	document.location.href="test2.php"
+		   	document.location.href="test9.html"
 		   }
 		</script>
 		<!-- //Source : www.exelib.net -->

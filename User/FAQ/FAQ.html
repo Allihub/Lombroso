@@ -1,7 +1,3 @@
-<?php
-// On démarre la session AVANT d'écrire du code HTML
-session_start();
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,18 +16,18 @@ session_start();
             <div class="box_0_element">
                 <ul>
                     <li>
-                        <a href="../Accueil/admin.php">
+                        <a href="../User/User.php">
                             <image src= "logo-alex_Plan de travail 1.png" title="Menu"></image>
                         </a>
                    </li>
                 </ul>
                 
             </div>
-            <div class="box_0_element"><a href="../Aide/aide.html" style="color:black;font-size:30px;text-decoration:none" title="Aide">Aide </a></div>
+            <div class="box_0_element"><a href="../Aide/aide.html" style="color:black" title="Aide">Lombroso </a></div>
             <div class="box_0_element">
                 <ul>
                     <li>
-                        <a href="../profiladmin/Profil.php">
+                        <a href="../profiluser/profiluser.html">
                             <image src= "user.png" title="Profil"></image>
                         </a>
                    </li>
@@ -43,39 +39,8 @@ session_start();
         
         <div class="aside_nav">
             <section>
-            <?php
                 
-                    // echo 'coucou' . $_POST['question'];
-
-                    try {
-                        $bdd = new PDO('mysql:host=localhost;dbname=lombroso;charset=utf8', 'root', '');
-                    } catch (Exception $e) {
-                        die('Erreur : ' . $e->getMessage());
-                    }//Connexion classqiue à la bdd
-
-                    
-
-                    $reponse = $bdd->query('SELECT Intitule, Contenu, Numero_Question FROM faq');
-                    
-                    while ($donnees = $reponse->fetch())
-                    {
-                        $NQ = $donnees['Numero_Question'];
-                        $Q = $donnees['Intitule'];
-                        $R = $donnees['Contenu'];
-                        // echo $donnees['Intitule'] . $donnees['Contenu'] . '<br />';
-                        echo"<section class='faq-section'>
-                            <input type='checkbox' id='$NQ'>
-                            <label for='$NQ'>$NQ $Q</label>
-                            <p>... Voir la réponse ...</p>
-                            <p>... $R ...</p>
-                        </section>";
-                    }
-
-                    $reponse->closeCursor();
-                    
-                
-            ?>
-                <!-- <section class="faq-section">
+                <section class="faq-section">
                     <input type="checkbox" id="q1">
                     <label for="q1">Que faire si le test ne se lance pas ou si le test ne fonctionne pas subitement lors d’un test ?</label>
                     <p>... Dans un premier temps relancez le test ...</p>
@@ -122,64 +87,13 @@ session_start();
                     <label for="q7">Le site web prévoit-il une messagerie interne pour le personnel ?</label>
                     <p>... Non... ...</p>
                     <p>... Le site web du Lombroso ne prévoit pas encore de messagerie interne ...</p>
-                </section> -->
+                </section>
                 
             </section>
         </div>
     </div>
     <footer>
-    <form method="POST" action="ajout.php" name="form">
-        <input type ="text" id="poser" placeholder="Ajouter une question" name="question"> 
-        <input type ="text" id="reponse" placeholder="Ajouter la réponse" name="reponse"> <br>
-        <input type="submit" value="Ajouter" onclick="return verif()">
-    </form>
-    <br>
-    <form method="POST" action="suppression.php" name="form2">
-        <input type ="number" id="sup" placeholder="Entrer le numéro" name="sup"> <br>
-        <input type="submit" value="Supprimer la question" onclick="return verif2()">
-    </form>
-    <script type="text/javascript">
-        function verif(){
-
-            if (form.question.value == false && form.reponse.value=="")
-                {
-                alert('Vous devez remplir le champ question et le champ réponse.');
-                // document.location.href="admin.php";
-                return false;
-                }
-            else if (form.question.value == false )
-                {
-                alert('Vous devez remplir le champ question.');
-                return false;
-                }
-            else if (form.reponse.value=="")
-            {
-            alert('Vous devez remplir le champ réponse.');
-            return false;
-            }
-            
-            else
-                {
-                    // document.location.href="tick.php"
-                    return true;
-                }
-
-
-            // if(document.getElementById(CGU).checked == true){
-            //     alert('CGU  acceptés !');
-            // }
-            // else{
-            //     alert('CGU non acceptés !');
-            // }
-        }
-        function verif2(){
-            if (form2.sup.value == "")
-                {
-                alert('Vous devez remplir le numéro de la question à supprimer.');
-                return false;
-                }
-        }
-    </script>
+        <input type ="text" id="poser" placeholder="Poser une question"> <input type="submit">
     </footer>
     <footer>
         <div id="box_1">
@@ -187,7 +101,7 @@ session_start();
             <div class="box_1_element">
                 <ul>
                     <li>
-                        <a href="../mail/mail.php">
+                        <a href="../mail/mail.html">
                             <image src= "email.png" title="Mail"></image>
                         </a>
                    </li>
@@ -196,7 +110,7 @@ session_start();
             <div class="box_1_element">
                 <ul>
                     <li>
-                        <a href="../FAQ/FAQ.php">
+                        <a href="../FAQ/FAQ.html">
                             <image src= "help.png" title="FAQ"></image>
                         </a>
                    </li>
